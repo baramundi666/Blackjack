@@ -1,6 +1,12 @@
+import java.io.IOException;
+
 public class Main {
     public static void main(String[] args) {
-        Card abc = new Card(Value.ACE,Suit.SPADE);
-        System.out.println(abc);
+        var Round = new Round(1);
+        try {
+            Round.play();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

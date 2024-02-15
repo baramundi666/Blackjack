@@ -21,7 +21,7 @@ public enum Value {
         };
     }
 
-    public int getValue() {
+    public int getPoints() {
         return switch(this) {
             case ACE -> 11;
             case KING, QUEEN, JACK, TEN -> 10;
