@@ -5,7 +5,7 @@ public class Main {
         var Round = new Round(1);
         try {
             Round.play();
-        } catch (IOException e) {
+        } catch (IOException | IllegalStateException e) {
             throw new RuntimeException(e);
         }
     }
