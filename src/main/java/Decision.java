@@ -1,3 +1,3 @@
 public enum Decision {
-    HIT, STAY, DOUBLE, SPLIT, NEUTRAL;
+    HIT, STAND, DOUBLE, SPLIT, NONE;
 }

@@ -9,7 +9,7 @@ public enum Value {
             case KING -> "K";
             case QUEEN -> "Q";
             case JACK -> "J";
-            case TEN -> "T";
+            case TEN -> "10";
             case NINE -> "9";
             case EIGHT -> "8";
             case SEVEN -> "7";

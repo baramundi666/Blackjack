@@ -1,3 +1,3 @@
 public enum Status {
-    PLAYING, DEAD, STAYED;
+    PLAYING, BUST, WAITING;
 }
