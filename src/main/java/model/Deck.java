@@ -1,6 +1,10 @@
+package model;
+
+import model.basic.Suit;
+import model.basic.Value;
+
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.LinkedList;
 import java.util.List;
 
 public class Deck {

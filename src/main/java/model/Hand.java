@@ -1,3 +1,9 @@
+package model;
+
+import model.basic.Decision;
+import model.basic.Status;
+import model.basic.Value;
+
 import java.util.LinkedList;
 import java.util.List;
 import java.util.UUID;
@@ -53,7 +59,7 @@ public class Hand {
     }
 
     public void updateHand(Card card) {
-        if(card.getValue()==Value.ACE) aceCount++;
+        if(card.getValue()== Value.ACE) aceCount++;
         cards.add(card);
         setPoints(getPoints()+card.getValue().getPoints());
     }

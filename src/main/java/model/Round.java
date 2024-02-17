@@ -1,3 +1,9 @@
+package model;
+
+import model.basic.Decision;
+import model.basic.Result;
+import model.basic.Status;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;

@@ -1,3 +1,5 @@
+package model.basic;
+
 public enum Result {
     WIN, LOSE, PUSH, BLACKJACK;
 

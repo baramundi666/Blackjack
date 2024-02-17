@@ -1,3 +1,8 @@
+package model;
+
+import model.basic.Suit;
+import model.basic.Value;
+
 public class Card {
     private final Value value;
     private final Suit suit;
