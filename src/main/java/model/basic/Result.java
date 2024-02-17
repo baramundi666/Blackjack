@@ -1,7 +1,7 @@
 package model.basic;
 
 public enum Result {
-    WIN, LOSE, PUSH, BLACKJACK;
+    WIN, LOSE, PUSH, BLACKJACK, SURRENDERED;
 
     @Override
     public String toString() {
@@ -10,6 +10,7 @@ public enum Result {
             case LOSE -> "LOSE";
             case PUSH -> "PUSH";
             case BLACKJACK -> "BLACKJACK";
+            case SURRENDERED -> "SURRENDERED";
         };
     }
 }

@@ -83,11 +83,4 @@ public class RoundSimulation extends AbstractRound{
         finishBets();
         clearHands();
     }
-
-    private void makeBets(List<Player> players) {
-        for(Player player : players) {
-            player.setBalance(player.getBalance()-1);
-            player.getHands().get(0).setBet(1);
-        }
-    }
 }

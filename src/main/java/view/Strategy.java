@@ -24,15 +24,23 @@ public class Strategy {
             decision = pattern.pair().get(
                     new Pair<>(playerCards.get(0).getValue(), dealerCards.get(0).getValue()));
         }
-        else if(playerHand.getAceCount()==1 && playerHand.getPoints()<11) {
+        else if(playerHand.getAceCount()==1 && playerHand.getPoints()<22) {
             //System.out.println("ace" + playerHand.getPoints());
             decision = pattern.ace().get(
                     new Pair<>(playerHand.getPoints()-11, dealerCards.get(0).getValue()));
+            if(decision==Decision.DOUBLE && playerHand.getCards().size()>2) {
+                if(playerHand.getPoints()-11<7) decision = Decision.HIT;
+                else decision = Decision.STAND;
+            }
         }
         else {
             //System.out.println("normal" + playerHand.getPoints());
             decision = pattern.normal().get(
                     new Pair<>(playerHand.getPoints(), dealerCards.get(0).getValue()));
+            // not possible to double
+            if(decision==Decision.DOUBLE && playerHand.getCards().size()>2) {
+                decision = Decision.HIT;
+            }
         }
         if(decision==Decision.NONE) System.out.println("error: decision = NONE");
         return decision;

@@ -75,6 +75,9 @@ public abstract class AbstractRound {
                 newHand.setBet(hand.getBet());
                 player.addHand(newHand);
             }
+            case SURRENDER -> {
+                hand.setStatus(Status.BUST);
+            }
         }
     }
 
@@ -103,7 +106,10 @@ public abstract class AbstractRound {
         Result result;
         int dealerPoints = dealerHand.getPoints();
         int playerPoints = playerHand.getPoints();
-        if(playerPoints>21) {
+        if(playerHand.getDecision()==Decision.SURRENDER) {
+            result = Result.SURRENDERED;
+        }
+        else if(playerPoints>21) {
             result = Result.LOSE;
         }
         else if(playerPoints==21 && playerHand.getCards().size()==2 && dealerPoints!=21){
@@ -125,6 +131,13 @@ public abstract class AbstractRound {
         return result;
     }
 
+    protected void makeBets(List<Player> players) {
+        for(Player player : players) {
+            player.setBalance(player.getBalance()-1);
+            player.getHands().get(0).setBet(1);
+        }
+    }
+
     protected void finishBets() {
         var hands = new ArrayList<Hand>();
         for(Player player : players) {
@@ -139,6 +152,7 @@ public abstract class AbstractRound {
                 case LOSE -> {}
                 case PUSH -> player.setBalance(player.getBalance()+playerHand.getBet());
                 case BLACKJACK -> player.setBalance(player.getBalance()+playerHand.getBet()*2.5);
+                case SURRENDERED -> player.setBalance(player.getBalance()+playerHand.getBet()*0.5);
             }
         }
 
