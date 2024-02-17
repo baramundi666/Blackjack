@@ -1,4 +1,4 @@
-package view;
+package strategy;
 
 import model.Hand;
 import model.basic.Decision;
@@ -42,7 +42,7 @@ public class Strategy {
                 decision = Decision.HIT;
             }
         }
-        if(decision==Decision.NONE) System.out.println("error: decision = NONE");
+        //if(decision==Decision.NONE) System.out.println("error: decision = NONE");
         return decision;
     }
 

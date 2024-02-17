@@ -1,13 +1,16 @@
-package model;
+package model.round;
 
+import model.Deck;
+import model.Hand;
+import model.Player;
 import model.basic.Decision;
 import model.basic.Status;
-import view.Strategy;
+import strategy.Strategy;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class RoundSimulation extends AbstractRound{
+public class RoundSimulation extends AbstractRound {
     private final Strategy strategy;
 
 

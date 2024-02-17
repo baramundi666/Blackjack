@@ -1,7 +1,8 @@
-package view;
+package strategy;
 
 import model.basic.Decision;
 import model.basic.Value;
+import strategy.Pair;
 
 import java.util.HashMap;
 

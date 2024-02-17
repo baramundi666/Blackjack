@@ -1,5 +1,9 @@
-package model;
+package model.round;
 
+import model.Card;
+import model.Deck;
+import model.Hand;
+import model.Player;
 import model.basic.Decision;
 import model.basic.Status;
 
@@ -8,7 +12,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
-public class Round extends AbstractRound{
+public class Round extends AbstractRound {
 
     public Round(int playerCount, Deck deck) {
         super(playerCount, deck);

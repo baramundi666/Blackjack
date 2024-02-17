@@ -1,6 +1,8 @@
-package view;
+package run;
 
 import model.*;
+import model.round.RoundSimulation;
+import strategy.Strategy;
 
 import java.util.List;
 

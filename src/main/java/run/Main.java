@@ -1,10 +1,6 @@
-package view;
+package run;
 
-import model.basic.Decision;
-import model.basic.Value;
-
-import java.util.HashMap;
-import java.util.List;
+import strategy.Strategy;
 
 public class Main {
     public static void main(String[] args) {

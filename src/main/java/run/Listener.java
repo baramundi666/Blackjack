@@ -1,4 +1,4 @@
-package model;
+package run;
 
 import model.basic.Result;
 
