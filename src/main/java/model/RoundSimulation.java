@@ -2,30 +2,20 @@ package model;
 
 import model.basic.Decision;
 import model.basic.Status;
+import view.Strategy;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 
-public class Round extends AbstractRound{
+public class RoundSimulation extends AbstractRound{
+    private final Strategy strategy;
 
-    public Round(int playerCount, Deck deck) {
+    public RoundSimulation(int playerCount, Deck deck, Strategy strategy) {
         super(playerCount, deck);
+        this.strategy = strategy;
     }
 
     @Override
-    public void play() throws IllegalStateException, IOException {
-        BufferedReader reader = new BufferedReader(
-                new InputStreamReader(System.in));
-
-//        for(Player player : players) {
-//            System.out.println("Player: " + player.getPlayerId());
-//            System.out.print("Input bet amount: ");
-//            var betAmount = Double.parseDouble(reader.readLine());
-//            player.bet(betAmount);
-//        }
-
+    public void play() {
         // Each player has one hand at the beginning
         for(Player player : players) {
             var newHand = new Hand(player);
@@ -64,13 +54,8 @@ public class Round extends AbstractRound{
                     }
                     System.out.println();
                     System.out.print("Input your decision: ");
-                    Decision decision = switch (reader.readLine()) {
-                        case "hit" -> Decision.HIT;
-                        case "stand" -> Decision.STAND;
-                        case "double" -> Decision.DOUBLE;
-                        case "split" -> Decision.SPLIT;
-                        default -> throw new IllegalStateException("Unexpected value: " + reader.readLine());
-                    };
+                    Decision decision = strategy.getDecision(dealerHand, hand);
+                    System.out.println(decision.toString());
                     handleDecision(hand, decision);
                     handsLeftCount++;
                 }
@@ -80,7 +65,7 @@ public class Round extends AbstractRound{
         while(dealerHand.getPoints()<17) {
             dealerHand.updateHand(deck.getNextCard());
             var currentPoints = dealerHand.getPoints();
-            while(currentPoints>21 && dealerHand.getAceCount()>0) {
+            if(currentPoints>21 && dealerHand.getAceCount()>0) {
                 dealerHand.subtractFromAceCount();
                 dealerHand.setPoints(currentPoints-10);
             }
