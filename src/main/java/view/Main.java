@@ -17,7 +17,7 @@ public class Main {
 //        }
         // Empty constructor for "Basic Strategy"
         var basicStrategy = new Strategy();
-        var simulation = new Simulation(basicStrategy, 6, 10000);
+        var simulation = new Simulation(basicStrategy, 6, 100000);
         simulation.start();
     }
 

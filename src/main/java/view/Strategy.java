@@ -67,6 +67,9 @@ public class Strategy {
         normal.put(new Pair<>(11, Value.EIGHT), Decision.DOUBLE);
         normal.put(new Pair<>(11, Value.NINE), Decision.DOUBLE);
         normal.put(new Pair<>(11, Value.TEN), Decision.DOUBLE);
+        normal.put(new Pair<>(11, Value.JACK), Decision.DOUBLE);
+        normal.put(new Pair<>(11, Value.QUEEN), Decision.DOUBLE);
+        normal.put(new Pair<>(11, Value.KING), Decision.DOUBLE);
         normal.put(new Pair<>(12, Value.FOUR), Decision.STAND);
         normal.put(new Pair<>(12, Value.FIVE), Decision.STAND);
         normal.put(new Pair<>(12, Value.SIX), Decision.STAND);
@@ -100,11 +103,14 @@ public class Strategy {
             ace.put(new Pair<>(i, Value.FIVE), Decision.DOUBLE);
             ace.put(new Pair<>(i, Value.SIX), Decision.DOUBLE);
         }
-        ace.put(new Pair<>(6, Value.TWO), Decision.STAND);
-        ace.put(new Pair<>(6, Value.THREE), Decision.DOUBLE);
-        ace.put(new Pair<>(6, Value.FOUR), Decision.DOUBLE);
-        ace.put(new Pair<>(6, Value.FIVE), Decision.DOUBLE);
-        ace.put(new Pair<>(7, Value.SIX), Decision.DOUBLE);
+        for(int i=6;i<8;i++) {
+            ace.put(new Pair<>(i, Value.THREE), Decision.DOUBLE);
+            ace.put(new Pair<>(i, Value.FOUR), Decision.DOUBLE);
+            ace.put(new Pair<>(i, Value.FIVE), Decision.DOUBLE);
+            ace.put(new Pair<>(i, Value.SIX), Decision.DOUBLE);
+        }
+        //fixed mistake here
+        ace.put(new Pair<>(7, Value.TWO), Decision.STAND);
         ace.put(new Pair<>(7, Value.SEVEN), Decision.STAND);
         ace.put(new Pair<>(7, Value.EIGHT), Decision.STAND);
         for(int i=8;i<11;i++) {
@@ -130,6 +136,9 @@ public class Strategy {
         pair.put(new Pair<>(Value.ACE, Value.EIGHT), Decision.SPLIT);
         pair.put(new Pair<>(Value.ACE, Value.NINE), Decision.SPLIT);
         pair.put(new Pair<>(Value.ACE, Value.TEN), Decision.SPLIT);
+        pair.put(new Pair<>(Value.ACE, Value.JACK), Decision.SPLIT);
+        pair.put(new Pair<>(Value.ACE, Value.QUEEN), Decision.SPLIT);
+        pair.put(new Pair<>(Value.ACE, Value.KING), Decision.SPLIT);
         pair.put(new Pair<>(Value.TWO, Value.TWO), Decision.SPLIT);
         pair.put(new Pair<>(Value.TWO, Value.THREE), Decision.SPLIT);
         pair.put(new Pair<>(Value.TWO, Value.FOUR), Decision.SPLIT);
@@ -162,6 +171,8 @@ public class Strategy {
         pair.put(new Pair<>(Value.SEVEN, Value.FOUR), Decision.SPLIT);
         pair.put(new Pair<>(Value.SEVEN, Value.FIVE), Decision.SPLIT);
         pair.put(new Pair<>(Value.SEVEN, Value.SIX), Decision.SPLIT);
+        //fixed mistake here
+        pair.put(new Pair<>(Value.SEVEN, Value.SEVEN), Decision.SPLIT);
         pair.put(new Pair<>(Value.EIGHT, Value.TWO), Decision.SPLIT);
         pair.put(new Pair<>(Value.EIGHT, Value.THREE), Decision.SPLIT);
         pair.put(new Pair<>(Value.EIGHT, Value.FOUR), Decision.SPLIT);

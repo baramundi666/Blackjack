@@ -13,10 +13,15 @@ public abstract class AbstractRound {
     protected final Player dealer = new Player();
     protected final List<Player> players = new ArrayList<>(playerCount);
     protected final Deck deck;
+    protected Listener listener;
 
     public AbstractRound(int playerCount, Deck deck) {
         this.playerCount = playerCount;
         this.deck = deck;
+    }
+
+    public void registerListener(Listener listener) {
+        this.listener = listener;
     }
 
     public abstract void play() throws IOException;
@@ -95,13 +100,29 @@ public abstract class AbstractRound {
     }
 
     protected Result getResult(Hand dealerHand, Hand playerHand) {
+        Result result;
         int dealerPoints = dealerHand.getPoints();
         int playerPoints = playerHand.getPoints();
-        if(playerPoints==21) return Result.BLACKJACK;
-        if(playerPoints>21) return Result.LOSE;
-        if(dealerPoints>21 || playerPoints>dealerPoints) return Result.WIN;
-        if(dealerPoints==playerPoints) return Result.PUSH;
-        return Result.LOSE;
+        if(playerPoints>21) {
+            result = Result.LOSE;
+        }
+        else if(playerPoints==21 && playerHand.getCards().size()==2 && dealerPoints!=21){
+            result = Result.BLACKJACK;
+        }
+        else if(playerPoints==21 && dealerPoints==21){
+            result = Result.PUSH;
+        }
+        else if(dealerPoints>21 || playerPoints>dealerPoints){
+            result = Result.WIN;
+        }
+        else if(dealerPoints==playerPoints){
+            result = Result.PUSH;
+        }
+        else {
+            result = Result.LOSE;
+        }
+        listener.notify(result);
+        return result;
     }
 
     protected void finishBets() {

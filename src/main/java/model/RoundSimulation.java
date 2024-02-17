@@ -10,6 +10,7 @@ import java.util.List;
 public class RoundSimulation extends AbstractRound{
     private final Strategy strategy;
 
+
     public RoundSimulation(List<Player> players, int playerCount, Deck deck, Strategy strategy) {
         super(playerCount, deck);
         this.strategy = strategy;
@@ -29,8 +30,8 @@ public class RoundSimulation extends AbstractRound{
         var dealerHand = new Hand(dealer);
         dealer.addHand(dealerHand);
         dealerHand.updateHand(dealerCard);
-        System.out.println("Dealer: ");
-        System.out.println("Hand: " + dealerCard.toString());
+//        System.out.println("Dealer: ");
+//        System.out.println("Hand: " + dealerCard.toString());
 
         for(Player player : players) {
             player.getHands().get(0).updateHand(deck.getNextCard());
@@ -53,16 +54,16 @@ public class RoundSimulation extends AbstractRound{
             }
             for (Hand hand : hands) {
                 if (hand.getStatus() == Status.PLAYING) {
-                    System.out.println("Player: " + hand.getPlayer().getPlayerId());
-                    System.out.println("Hand: " + hand.getHandId());
-                    for (Card card : hand.getCards()) {
-                        System.out.print(card.toString() + " ");
-                    }
-                    System.out.println();
-                    System.out.print("Input your decision: ");
+//                    System.out.println("Player: " + hand.getPlayer().getPlayerId());
+//                    System.out.println("Hand: " + hand.getHandId());
+//                    for (Card card : hand.getCards()) {
+//                        System.out.print(card.toString() + " ");
+//                    }
+//                    System.out.println();
+//                    System.out.print("Input your decision: ");
                     Decision decision = strategy.getDecision(dealerHand, hand);
-                    System.out.println(decision.toString());
-                    System.out.println();
+//                    System.out.println(decision.toString());
+//                    System.out.println();
                     handleDecision(hand, decision);
                     handsLeftCount++;
                 }
@@ -78,16 +79,15 @@ public class RoundSimulation extends AbstractRound{
             }
         }
 
-        printResults(dealerHand, hands);
+//        printResults(dealerHand, hands);
         finishBets();
         clearHands();
-
     }
 
     private void makeBets(List<Player> players) {
         for(Player player : players) {
-            player.setBalance(player.getBalance()-10);
-            player.getHands().get(0).setBet(10);
+            player.setBalance(player.getBalance()-1);
+            player.getHands().get(0).setBet(1);
         }
     }
 }
