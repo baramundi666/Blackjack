@@ -9,13 +9,12 @@ public class Player {
     private final List<Hand> hands = new ArrayList<>();
     private double balance = 0;
 
-    private double bet;
 
     public UUID getPlayerId() {
         return playerId;
     }
 
-    public void updateBalance(double money) {
+    public void setBalance(double money) {
         balance = money;
     }
 
@@ -27,12 +26,11 @@ public class Player {
         return new ArrayList<>(hands);
     }
 
-    public void bet(double money) {
-        bet = money;
-        balance -= money;
-    }
-
     public void addHand(Hand hand) {
         hands.add(hand);
+    }
+
+    public void resetHands() {
+        hands.clear();
     }
 }

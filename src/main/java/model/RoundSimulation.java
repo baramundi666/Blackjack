@@ -5,13 +5,15 @@ import model.basic.Status;
 import view.Strategy;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class RoundSimulation extends AbstractRound{
     private final Strategy strategy;
 
-    public RoundSimulation(int playerCount, Deck deck, Strategy strategy) {
+    public RoundSimulation(List<Player> players, int playerCount, Deck deck, Strategy strategy) {
         super(playerCount, deck);
         this.strategy = strategy;
+        this.players.addAll(players);
     }
 
     @Override
@@ -25,6 +27,7 @@ public class RoundSimulation extends AbstractRound{
 
         var dealerCard = deck.getNextCard();
         var dealerHand = new Hand(dealer);
+        dealer.addHand(dealerHand);
         dealerHand.updateHand(dealerCard);
         System.out.println("Dealer: ");
         System.out.println("Hand: " + dealerCard.toString());
@@ -32,6 +35,9 @@ public class RoundSimulation extends AbstractRound{
         for(Player player : players) {
             player.getHands().get(0).updateHand(deck.getNextCard());
         }
+
+
+        makeBets(players);
 
 
         var hands = new ArrayList<Hand>();
@@ -56,6 +62,7 @@ public class RoundSimulation extends AbstractRound{
                     System.out.print("Input your decision: ");
                     Decision decision = strategy.getDecision(dealerHand, hand);
                     System.out.println(decision.toString());
+                    System.out.println();
                     handleDecision(hand, decision);
                     handsLeftCount++;
                 }
@@ -72,6 +79,15 @@ public class RoundSimulation extends AbstractRound{
         }
 
         printResults(dealerHand, hands);
+        finishBets();
+        clearHands();
 
+    }
+
+    private void makeBets(List<Player> players) {
+        for(Player player : players) {
+            player.setBalance(player.getBalance()-10);
+            player.getHands().get(0).setBet(10);
+        }
     }
 }

@@ -16,9 +16,6 @@ public abstract class AbstractRound {
 
     public AbstractRound(int playerCount, Deck deck) {
         this.playerCount = playerCount;
-        for(int i=0;i<playerCount;i++) {
-            players.add(new Player());
-        }
         this.deck = deck;
     }
 
@@ -44,6 +41,9 @@ public abstract class AbstractRound {
             }
             case STAND -> hand.setStatus(Status.WAITING);
             case DOUBLE -> {
+                var player = hand.getPlayer();
+                player.setBalance(player.getBalance()-hand.getBet());
+                hand.setBet(hand.getBet()*2);
                 hand.updateHand(deck.getNextCard());
                 var currentPoints = hand.getPoints();
                 if (currentPoints>21) {
@@ -66,6 +66,8 @@ public abstract class AbstractRound {
                 var newHand = new Hand(player);
                 newHand.updateHand(card);
                 newHand.updateHand(deck.getNextCard());
+                player.setBalance(player.getBalance()- hand.getBet());
+                newHand.setBet(hand.getBet());
                 player.addHand(newHand);
             }
         }
@@ -88,10 +90,11 @@ public abstract class AbstractRound {
             }
             System.out.print("(Points: " + hand.getPoints() + ", ");
             System.out.println("Result:" + getResult(dealerHand, hand).toString() + ")");
+            System.out.println();
         }
     }
 
-    public Result getResult(Hand dealerHand, Hand playerHand) {
+    protected Result getResult(Hand dealerHand, Hand playerHand) {
         int dealerPoints = dealerHand.getPoints();
         int playerPoints = playerHand.getPoints();
         if(playerPoints==21) return Result.BLACKJACK;
@@ -99,5 +102,30 @@ public abstract class AbstractRound {
         if(dealerPoints>21 || playerPoints>dealerPoints) return Result.WIN;
         if(dealerPoints==playerPoints) return Result.PUSH;
         return Result.LOSE;
+    }
+
+    protected void finishBets() {
+        var hands = new ArrayList<Hand>();
+        for(Player player : players) {
+            hands.addAll(player.getHands());
+        }
+
+        for(Hand playerHand : hands) {
+            var result = getResult(dealer.getHands().get(0), playerHand);
+            var player = playerHand.getPlayer();
+            switch(result) {
+                case WIN -> player.setBalance(player.getBalance()+playerHand.getBet()*2);
+                case LOSE -> {}
+                case PUSH -> player.setBalance(player.getBalance()+playerHand.getBet());
+                case BLACKJACK -> player.setBalance(player.getBalance()+playerHand.getBet()*2.5);
+            }
+        }
+
+    }
+
+    protected void clearHands() {
+        for(Player player : players) {
+            player.resetHands();
+        }
     }
 }

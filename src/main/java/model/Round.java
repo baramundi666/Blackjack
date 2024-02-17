@@ -12,6 +12,9 @@ public class Round extends AbstractRound{
 
     public Round(int playerCount, Deck deck) {
         super(playerCount, deck);
+        for(int i=0;i<playerCount;i++) {
+            players.add(new Player());
+        }
     }
 
     @Override

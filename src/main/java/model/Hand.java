@@ -16,6 +16,7 @@ public class Hand {
     private final List<Card> cards = new LinkedList<>();
     private Status status = Status.PLAYING;
     private Decision decision = Decision.NONE;
+    private double bet;
 
     public Hand(Player player) {
         this.player = player;
@@ -26,6 +27,14 @@ public class Hand {
 //        this.points = points;
 //        this.player = player;
 //    }
+
+    public double getBet() {
+        return bet;
+    }
+
+    public void setBet(double bet) {
+        this.bet = bet;
+    }
 
     public UUID getHandId() {
         return handId;
