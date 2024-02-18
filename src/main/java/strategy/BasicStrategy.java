@@ -73,10 +73,11 @@ public class BasicStrategy extends AbstractStrategy {
         normal.put(new Pair<>(11, Value.SEVEN), new Pair<>(Decision.DOUBLE, 0));
         normal.put(new Pair<>(11, Value.EIGHT), new Pair<>(Decision.DOUBLE, 0));
         normal.put(new Pair<>(11, Value.NINE), new Pair<>(Decision.DOUBLE, 0));
-        normal.put(new Pair<>(11, Value.TEN), new Pair<>(Decision.DOUBLE, 0));
-        normal.put(new Pair<>(11, Value.JACK), new Pair<>(Decision.DOUBLE, 0));
-        normal.put(new Pair<>(11, Value.QUEEN), new Pair<>(Decision.DOUBLE, 0));
-        normal.put(new Pair<>(11, Value.KING), new Pair<>(Decision.DOUBLE, 0));
+        //made a change (ENHC)
+        normal.put(new Pair<>(11, Value.TEN), new Pair<>(Decision.HIT, 0));
+        normal.put(new Pair<>(11, Value.JACK), new Pair<>(Decision.HIT, 0));
+        normal.put(new Pair<>(11, Value.QUEEN), new Pair<>(Decision.HIT, 0));
+        normal.put(new Pair<>(11, Value.KING), new Pair<>(Decision.HIT, 0));
         normal.put(new Pair<>(12, Value.FOUR), new Pair<>(Decision.STAND, 0));
         normal.put(new Pair<>(12, Value.FIVE), new Pair<>(Decision.STAND, 0));
         normal.put(new Pair<>(12, Value.SIX), new Pair<>(Decision.STAND, 0));

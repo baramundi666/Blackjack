@@ -22,11 +22,11 @@ public class Hand {
         this.player = player;
     }
 
-//    public Hand(List<Card> cards, int points, Player player) {
-//        this.cards.addAll(cards);
-//        this.points = points;
-//        this.player = player;
-//    }
+    public Hand(List<Card> cards, int points, Player player) {
+        this.cards.addAll(cards);
+        this.points = points;
+        this.player = player;
+    }
 
     public double getBet() {
         return bet;

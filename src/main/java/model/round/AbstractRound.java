@@ -38,8 +38,10 @@ public abstract class AbstractRound {
             case HIT -> {
                 var nextCard = deck.getNextCard();
                 hand.updateHand(nextCard);
-                if(!Objects.isNull(counter)) counter.updateCount(nextCard);
-                counter.updateCurrentCardNumber();
+                if(!Objects.isNull(counter)) {
+                    counter.updateCount(nextCard);
+                    counter.updateCurrentCardNumber();
+                }
                 var currentPoints = hand.getPoints();
                 if (currentPoints>21) {
                     while (currentPoints>21 && hand.getAceCount()>0) {
@@ -60,8 +62,11 @@ public abstract class AbstractRound {
                 hand.setBet(hand.getBet()*2);
                 var nextCard = deck.getNextCard();
                 hand.updateHand(nextCard);
-                if(!Objects.isNull(counter)) counter.updateCount(nextCard);
-                counter.updateCurrentCardNumber();
+                if(!Objects.isNull(counter)) {
+                    counter.updateCount(nextCard);
+                    counter.updateCurrentCardNumber();
+                }
+
                 var currentPoints = hand.getPoints();
                 if (currentPoints>21) {
                     while (currentPoints>21 && hand.getAceCount()>0) {
@@ -81,14 +86,18 @@ public abstract class AbstractRound {
                 var card = hand.splitHand();
                 var nextCard = deck.getNextCard();
                 hand.updateHand(nextCard);
-                if(!Objects.isNull(counter)) counter.updateCount(nextCard);
-                counter.updateCurrentCardNumber();
+                if(!Objects.isNull(counter)) {
+                    counter.updateCount(nextCard);
+                    counter.updateCurrentCardNumber();
+                }
                 var newHand = new Hand(player);
                 newHand.updateHand(card);
                 nextCard = deck.getNextCard();
                 newHand.updateHand(nextCard);
-                if(!Objects.isNull(counter)) counter.updateCount(nextCard);
-                counter.updateCurrentCardNumber();
+                if(!Objects.isNull(counter)) {
+                    counter.updateCount(nextCard);
+                    counter.updateCurrentCardNumber();
+                }
                 player.setBalance(player.getBalance()- hand.getBet());
                 newHand.setBet(hand.getBet());
                 player.addHand(newHand);
@@ -132,15 +141,14 @@ public abstract class AbstractRound {
             result = Result.LOSE;
         }
         else if(playerPoints==21 && playerHand.getCards().size()==2 &&
-                (dealerPoints!=21 || dealerHand.getCards().size()!=2)
-        ){
+                (dealerPoints!=21)){
             result = Result.BLACKJACK;
-        }
-        else if(dealerPoints>21 || playerPoints>dealerPoints){
-            result = Result.WIN;
         }
         else if(dealerPoints==playerPoints){
             result = Result.PUSH;
+        }
+        else if(dealerPoints>21 || playerPoints>dealerPoints){
+            result = Result.WIN;
         }
         else {
             result = Result.LOSE;
@@ -173,5 +181,6 @@ public abstract class AbstractRound {
         for(Player player : players) {
             player.resetHands();
         }
+        dealer.resetHands();
     }
 }

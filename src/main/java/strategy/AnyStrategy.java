@@ -4,6 +4,8 @@ import model.Hand;
 import model.basic.Decision;
 import model.basic.Value;
 
+import java.util.Objects;
+
 public class AnyStrategy extends AbstractStrategy{
     public AnyStrategy(Pattern pattern) {
         this.pattern = pattern;
@@ -21,28 +23,29 @@ public class AnyStrategy extends AbstractStrategy{
                             new Pair<>(playerCards.get(0).getValue(), dealerCards.get(0).getValue()));
 
             decision = pair.a();
-            var realCount = counter.getRealCount();
-            if(pair.b()*realCount>0) { // both negative or both positive
-                if(Math.abs(realCount)>=Math.abs(pair.b())) {
-                    //System.out.println("pair "+ pair.b() + " " + realCount);
-                    var pc = playerHand.getPoints();
-                    if(pc == 18 || pc == 20 || pc == 10) {
-                        decision = switch (pair.a()) {
-                            case DOUBLE -> Decision.HIT;
-                            case HIT -> Decision.DOUBLE;
-                            case STAND -> Decision.SPLIT;
-                            case SPLIT -> Decision.STAND;
-                            default -> throw new
-                                    IllegalStateException("Unexpected value: " + pair.a());
-                        };
-                    }
-                    else {
-                        decision = switch (pair.a()) {
-                            case HIT -> Decision.SPLIT;
-                            case SPLIT -> Decision.HIT;
-                            default -> throw new
-                                    IllegalStateException("Unexpected value: " + pair.a());
-                        };
+            if(!Objects.isNull(counter)) {
+                var realCount = counter.getRealCount();
+                if (pair.b() * realCount > 0) { // both negative or both positive
+                    if (Math.abs(realCount) >= Math.abs(pair.b())) {
+                        //System.out.println("pair "+ pair.b() + " " + realCount);
+                        var pc = playerHand.getPoints();
+                        if (pc == 18 || pc == 20 || pc == 10) {
+                            decision = switch (pair.a()) {
+                                case DOUBLE -> Decision.HIT;
+                                case HIT -> Decision.DOUBLE;
+                                case STAND -> Decision.SPLIT;
+                                case SPLIT -> Decision.STAND;
+                                default -> throw new
+                                        IllegalStateException("Unexpected value: " + pair.a());
+                            };
+                        } else {
+                            decision = switch (pair.a()) {
+                                case HIT -> Decision.SPLIT;
+                                case SPLIT -> Decision.HIT;
+                                default -> throw new
+                                        IllegalStateException("Unexpected value: " + pair.a());
+                            };
+                        }
                     }
                 }
             }
@@ -53,16 +56,18 @@ public class AnyStrategy extends AbstractStrategy{
                             new Pair<>(playerHand.getPoints()-11, dealerCards.get(0).getValue()));
 
             decision = pair.a();
-            var realCount = counter.getRealCount();
-            if(pair.b()*realCount>0) { // both negative or both positive
-                if(Math.abs(realCount)>=Math.abs(pair.b())) {
-                    //System.out.println("ace "+ pair.b() + " " + realCount);
-                    decision = switch (pair.a()) {
-                        case HIT,STAND -> Decision.DOUBLE;
-                        case DOUBLE -> Decision.HIT;
-                        default -> throw new
-                                IllegalStateException("Unexpected value: " + pair.a());
-                    };
+            if(!Objects.isNull(counter)) {
+                var realCount = counter.getRealCount();
+                if (pair.b() * realCount > 0) { // both negative or both positive
+                    if (Math.abs(realCount) >= Math.abs(pair.b())) {
+                        //System.out.println("ace "+ pair.b() + " " + realCount);
+                        decision = switch (pair.a()) {
+                            case HIT, STAND -> Decision.DOUBLE;
+                            case DOUBLE -> Decision.HIT;
+                            default -> throw new
+                                    IllegalStateException("Unexpected value: " + pair.a());
+                        };
+                    }
                 }
             }
 
@@ -77,26 +82,27 @@ public class AnyStrategy extends AbstractStrategy{
                             new Pair<>(playerHand.getPoints(), dealerCards.get(0).getValue()));
 
             decision = pair.a();
-            var realCount = counter.getRealCount();
-            if(pair.b()*realCount>0) { // both negative or both positive
-                if(Math.abs(realCount)>=Math.abs(pair.b())) {
-                    //System.out.println("normal "+ pair.b() + " " + realCount);
-                    var pc = playerHand.getPoints();
-                    if(pc < 12) {
-                        decision = switch (pair.a()) {
-                            case DOUBLE -> Decision.HIT;
-                            case HIT -> Decision.DOUBLE;
-                            default -> throw new
-                                    IllegalStateException("Unexpected value: " + pair.a());
-                        };
-                    }
-                    else {
-                        decision = switch (pair.a()) {
-                            case HIT -> Decision.STAND;
-                            case STAND -> Decision.HIT;
-                            default -> throw new
-                                    IllegalStateException("Unexpected value: " + pair.a());
-                        };
+            if(!Objects.isNull(counter)) {
+                var realCount = counter.getRealCount();
+                if(pair.b()*realCount>0) { // both negative or both positive
+                    if (Math.abs(realCount) >= Math.abs(pair.b())) {
+                        //System.out.println("normal "+ pair.b() + " " + realCount);
+                        var pc = playerHand.getPoints();
+                        if (pc < 12) {
+                            decision = switch (pair.a()) {
+                                case DOUBLE -> Decision.HIT;
+                                case HIT -> Decision.DOUBLE;
+                                default -> throw new
+                                        IllegalStateException("Unexpected value: " + pair.a());
+                            };
+                        } else {
+                            decision = switch (pair.a()) {
+                                case HIT -> Decision.STAND;
+                                case STAND -> Decision.HIT;
+                                default -> throw new
+                                        IllegalStateException("Unexpected value: " + pair.a());
+                            };
+                        }
                     }
                 }
             }
