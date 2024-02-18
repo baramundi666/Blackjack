@@ -1,4 +1,4 @@
 package strategy;
 
-public record Pair<A, B>(A row, B column) {
+public record Pair<A, B>(A a, B b) {
 }

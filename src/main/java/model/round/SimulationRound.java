@@ -5,19 +5,27 @@ import model.Hand;
 import model.Player;
 import model.basic.Decision;
 import model.basic.Status;
-import strategy.Strategy;
+import strategy.AbstractStrategy;
+import strategy.CardCounter;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class RoundSimulation extends AbstractRound {
-    private final Strategy strategy;
+public class SimulationRound extends AbstractRound {
+    private final AbstractStrategy strategy;
+    private final CardCounter counter;
 
 
-    public RoundSimulation(List<Player> players, int playerCount, Deck deck, Strategy strategy) {
+    public SimulationRound(List<Player> players, int playerCount, Deck deck,
+                           AbstractStrategy strategy, CardCounter counter) {
         super(playerCount, deck);
         this.strategy = strategy;
+        this.counter = counter;
         this.players.addAll(players);
+    }
+
+    public CardCounter getCounter() {
+        return counter;
     }
 
     @Override
@@ -26,22 +34,30 @@ public class RoundSimulation extends AbstractRound {
         for(Player player : players) {
             var newHand = new Hand(player);
             player.addHand(newHand);
-            newHand.updateHand(deck.getNextCard());
+            var nextCard = deck.getNextCard();
+            newHand.updateHand(nextCard);
+            counter.updateCount(nextCard);
+            counter.updateCurrentCardNumber();
         }
 
         var dealerCard = deck.getNextCard();
         var dealerHand = new Hand(dealer);
         dealer.addHand(dealerHand);
         dealerHand.updateHand(dealerCard);
+        counter.updateCount(dealerCard);
+        counter.updateCurrentCardNumber();
 //        System.out.println("Dealer: ");
 //        System.out.println("Hand: " + dealerCard.toString());
 
         for(Player player : players) {
-            player.getHands().get(0).updateHand(deck.getNextCard());
+            var nextCard = deck.getNextCard();
+            player.getHands().get(0).updateHand(nextCard);
+            counter.updateCount(nextCard);
+            counter.updateCurrentCardNumber();
         }
 
 
-        makeBets(players);
+        makeBets();
 
 
         var hands = new ArrayList<Hand>();
@@ -64,17 +80,20 @@ public class RoundSimulation extends AbstractRound {
 //                    }
 //                    System.out.println();
 //                    System.out.print("Input your decision: ");
-                    Decision decision = strategy.getDecision(dealerHand, hand);
+                    Decision decision = strategy.getDecision(counter, dealerHand, hand);
 //                    System.out.println(decision.toString());
 //                    System.out.println();
-                    handleDecision(hand, decision);
+                    handleDecision(counter, hand, decision);
                     handsLeftCount++;
                 }
             }
         }
 
         while(dealerHand.getPoints()<17) {
-            dealerHand.updateHand(deck.getNextCard());
+            var nextCard = deck.getNextCard();
+            dealerHand.updateHand(nextCard);
+            counter.updateCount(nextCard);
+            counter.updateCurrentCardNumber();
             var currentPoints = dealerHand.getPoints();
             if(currentPoints>21 && dealerHand.getAceCount()>0) {
                 dealerHand.subtractFromAceCount();
@@ -85,5 +104,13 @@ public class RoundSimulation extends AbstractRound {
 //        printResults(dealerHand, hands);
         finishBets();
         clearHands();
+    }
+
+    @Override
+    protected void makeBets() {
+        for(Player player : players) {
+            player.setBalance(player.getBalance()-1);
+            player.getHands().get(0).setBet(1);
+        }
     }
 }

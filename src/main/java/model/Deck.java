@@ -17,6 +17,11 @@ public class Deck {
         this.cards = generateRandomDeck();
     }
 
+    public int getDeckSize() {
+        return this.deckCount;
+    }
+
+
     public Card getNextCard() {
         Card card;
         if (currentCardId<52*deckCount) {

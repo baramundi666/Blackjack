@@ -12,9 +12,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
-public class Round extends AbstractRound {
+public class ConsoleRound extends AbstractRound {
 
-    public Round(int playerCount, Deck deck) {
+    public ConsoleRound(int playerCount, Deck deck) {
         super(playerCount, deck);
         for(int i=0;i<playerCount;i++) {
             players.add(new Player());
@@ -23,22 +23,14 @@ public class Round extends AbstractRound {
 
     @Override
     public void play() throws IllegalStateException, IOException {
-        BufferedReader reader = new BufferedReader(
-                new InputStreamReader(System.in));
-
-//        for(Player player : players) {
-//            System.out.println("Player: " + player.getPlayerId());
-//            System.out.print("Input bet amount: ");
-//            var betAmount = Double.parseDouble(reader.readLine());
-//            player.bet(betAmount);
-//        }
-
         // Each player has one hand at the beginning
         for(Player player : players) {
             var newHand = new Hand(player);
             player.addHand(newHand);
             newHand.updateHand(deck.getNextCard());
         }
+
+        makeBets();
 
         var dealerCard = deck.getNextCard();
         var dealerHand = new Hand(dealer);
@@ -56,6 +48,8 @@ public class Round extends AbstractRound {
             hands.addAll(player.getHands());
         }
         int handsLeftCount  = playerCount;
+        BufferedReader reader = new BufferedReader(
+                new InputStreamReader(System.in));
         while(handsLeftCount>0) {
             handsLeftCount = 0;
             hands.clear();
@@ -72,13 +66,14 @@ public class Round extends AbstractRound {
                     System.out.println();
                     System.out.print("Input your decision: ");
                     Decision decision = switch (reader.readLine()) {
-                        case "hit" -> Decision.HIT;
-                        case "stand" -> Decision.STAND;
-                        case "double" -> Decision.DOUBLE;
-                        case "split" -> Decision.SPLIT;
+                        case "hit","h" -> Decision.HIT;
+                        case "stand","s" -> Decision.STAND;
+                        case "double","d" -> Decision.DOUBLE;
+                        case "split","p" -> Decision.SPLIT;
+                        case "surrender","u" -> Decision.SURRENDER;
                         default -> throw new IllegalStateException("Unexpected value: " + reader.readLine());
                     };
-                    handleDecision(hand, decision);
+                    handleDecision(null, hand, decision);
                     handsLeftCount++;
                 }
             }
@@ -95,5 +90,22 @@ public class Round extends AbstractRound {
 
         printResults(dealerHand, hands);
 
+    }
+
+    @Override
+    protected void makeBets() {
+        BufferedReader reader = new BufferedReader(
+                new InputStreamReader(System.in));
+        for(Player player : players) {
+            System.out.println("Player: " + player.getPlayerId());
+            System.out.print("Input bet amount: ");
+            double betAmount;
+            try {
+                betAmount = Double.parseDouble(reader.readLine());
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            player.getHands().get(0).setBet(betAmount);
+        }
     }
 }
