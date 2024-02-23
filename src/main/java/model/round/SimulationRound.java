@@ -1,5 +1,6 @@
 package model.round;
 
+import model.Card;
 import model.Deck;
 import model.Hand;
 import model.Player;
@@ -22,10 +23,6 @@ public class SimulationRound extends AbstractRound {
         this.strategy = strategy;
         this.counter = counter;
         this.players.addAll(players);
-    }
-
-    public CardCounter getCounter() {
-        return counter;
     }
 
     @Override
@@ -73,6 +70,7 @@ public class SimulationRound extends AbstractRound {
             }
             for (Hand hand : hands) {
                 if (hand.getStatus() == Status.PLAYING) {
+                    Decision decision = strategy.getDecision(counter, dealerHand, hand);
 //                    System.out.println("Player: " + hand.getPlayer().getPlayerId());
 //                    System.out.println("Hand: " + hand.getHandId());
 //                    for (Card card : hand.getCards()) {
@@ -80,7 +78,6 @@ public class SimulationRound extends AbstractRound {
 //                    }
 //                    System.out.println();
 //                    System.out.print("Input your decision: ");
-                    Decision decision = strategy.getDecision(counter, dealerHand, hand);
 //                    System.out.println(decision.toString());
 //                    System.out.println();
                     handleDecision(counter, hand, decision);
@@ -89,19 +86,28 @@ public class SimulationRound extends AbstractRound {
             }
         }
 
-        while(dealerHand.getPoints()<17) {
-            var nextCard = deck.getNextCard();
-            dealerHand.updateHand(nextCard);
-            counter.updateCount(nextCard);
-            counter.updateCurrentCardNumber();
-            var currentPoints = dealerHand.getPoints();
-            if(currentPoints>21 && dealerHand.getAceCount()>0) {
-                dealerHand.subtractFromAceCount();
-                dealerHand.setPoints(currentPoints-10);
+        tracker.setHandCount(tracker.getHandCount()+hands.size());
+
+        boolean areAllHandsOver = true;
+        for(Hand hand : hands) {
+            var status = hand.getStatus();
+            if(status==Status.PLAYING || status==Status.WAITING) areAllHandsOver=false;
+        }
+        if(!areAllHandsOver) {
+            while (dealerHand.getPoints() < 17) {
+                var nextCard = deck.getNextCard();
+                dealerHand.updateHand(nextCard);
+                counter.updateCount(nextCard);
+                counter.updateCurrentCardNumber();
+                var currentPoints = dealerHand.getPoints();
+                if (currentPoints > 21 && dealerHand.getAceCount() > 0) {
+                    dealerHand.subtractFromAceCount();
+                    dealerHand.setPoints(currentPoints - 10);
+                }
             }
         }
 
-//        printResults(dealerHand, hands);
+        //printResults(dealerHand, hands);
         finishBets();
         clearHands();
     }

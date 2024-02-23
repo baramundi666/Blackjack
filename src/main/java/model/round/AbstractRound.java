@@ -47,9 +47,9 @@ public abstract class AbstractRound {
                     while (currentPoints>21 && hand.getAceCount()>0) {
                         hand.subtractFromAceCount();
                         hand.setPoints(currentPoints-10);
-                        hand.setStatus(Status.WAITING);
                         currentPoints= hand.getPoints();
                     }
+                    hand.setStatus(Status.WAITING);
                     if(currentPoints>21) {
                         hand.setStatus(Status.BUST);
                     }
@@ -68,18 +68,18 @@ public abstract class AbstractRound {
                 }
 
                 var currentPoints = hand.getPoints();
+                hand.setStatus(Status.WAITING);
                 if (currentPoints>21) {
                     while (currentPoints>21 && hand.getAceCount()>0) {
                         hand.subtractFromAceCount();
                         hand.setPoints(currentPoints-10);
-                        hand.setStatus(Status.WAITING);
-                        currentPoints= hand.getPoints();
+                        currentPoints = hand.getPoints();
                     }
+                    hand.setStatus(Status.WAITING);
                     if(currentPoints>21) {
                         hand.setStatus(Status.BUST);
                     }
                 }
-                hand.setStatus(Status.WAITING);
             }
             case SPLIT -> {
                 var player = hand.getPlayer();
@@ -141,8 +141,12 @@ public abstract class AbstractRound {
             result = Result.LOSE;
         }
         else if(playerPoints==21 && playerHand.getCards().size()==2 &&
-                (dealerPoints!=21)){
+                !(dealerPoints==21 && dealerHand.getCards().size()==2)){
             result = Result.BLACKJACK;
+        }
+        else if(dealerPoints==21 && dealerHand.getCards().size()==2 &&
+                (playerPoints==21 && playerHand.getCards().size()>2)) {
+            result = Result.LOSE;
         }
         else if(dealerPoints==playerPoints){
             result = Result.PUSH;
@@ -153,7 +157,6 @@ public abstract class AbstractRound {
         else {
             result = Result.LOSE;
         }
-        if(!Objects.isNull(tracker)) tracker.notify(new Data(result));
         return result;
     }
 
@@ -165,6 +168,7 @@ public abstract class AbstractRound {
 
         for(Hand playerHand : hands) {
             var result = getResult(dealer.getHands().get(0), playerHand);
+            if(!Objects.isNull(tracker)) tracker.notify(new Data(result));
             var player = playerHand.getPlayer();
             switch(result) {
                 case WIN -> player.setBalance(player.getBalance()+playerHand.getBet()*2);

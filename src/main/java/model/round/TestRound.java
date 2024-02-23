@@ -7,6 +7,7 @@ import model.Player;
 import model.basic.Decision;
 import model.basic.Status;
 import strategy.AbstractStrategy;
+import strategy.CardCounter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -74,7 +75,8 @@ public class TestRound extends AbstractRound{
                         flag = false;
                     }
                     else {
-                        decision = strategy.getDecision(null, dealerHand, hand);
+                        decision = strategy.getDecision(new CardCounter(deck.getDeckSize()),
+                                dealerHand, hand);
                     }
                     handleDecision(null, hand, decision);
                     handsLeftCount++;

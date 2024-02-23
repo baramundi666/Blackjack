@@ -32,10 +32,18 @@ public class Simulation {
         for(Player player : players) {
             System.out.println("Player " + player.getPlayerId() + "'s balance: " + player.getBalance());
         }
+        int resultCount = 0;
         System.out.println("Win: " + listener.getWin());
+        resultCount+=listener.getWin();
         System.out.println("Lose: " + listener.getLose());
+        resultCount+=listener.getLose();
         System.out.println("Push: " + listener.getPush());
+        resultCount+=listener.getPush();
+        System.out.println("Surrender: " + listener.getSurrender());
+        resultCount+=listener.getSurrender();
         System.out.println("Blackjack: " + listener.getBlackjack());
+        resultCount+=listener.getBlackjack();
+        System.out.println("Status: "+ resultCount + "/" + listener.getHandCount());
         System.out.println("Simulation result: " + player1.getBalance()/simulationLength*100 + "%");
     }
 }

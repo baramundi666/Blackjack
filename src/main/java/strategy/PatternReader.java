@@ -11,39 +11,45 @@ public class PatternReader {
     public Pattern readPattern(String[][] array) {
         initialize();
 
-        var normal = new HashMap<Pair<Integer, Value>, Pair<Decision,Integer>>();
+        var normal = new HashMap<Pair<Integer, Value>, Instruction>();
         for(int i=0;i<16;i++) {
             for(int j=0;j<10;j++) {
                 for(Value value : columnTranslator.get(j)) {
                     normal.put(new Pair<>(i+5, value),
-                            new Pair<>(inputTranslator.get(array[i][j].substring(0,1)),
-                                    Integer.parseInt(array[i][j].substring(1))));
+                            new Instruction(inputTranslator.get(array[i][j].substring(0,1)),
+                                    Integer.parseInt(array[i][j].substring(2)),
+                                    inputTranslator.get(array[i][j].substring(1,2)),
+                                    true));
                 }
             }
         }
         for(Value value : Value.values())
-            normal.put(new Pair<>(21, value), new Pair<>(Decision.STAND, 0));
+            normal.put(new Pair<>(21, value), new Instruction(Decision.STAND));
 
-        var ace = new HashMap<Pair<Integer, Value>, Pair<Decision,Integer>>();
+        var ace = new HashMap<Pair<Integer, Value>, Instruction>();
         for(int i=16;i<24;i++) {
             for(int j=0;j<10;j++) {
                 for(Value value : columnTranslator.get(j)) {
                     ace.put(new Pair<>(i-14, value),
-                            new Pair<>(inputTranslator.get(array[i][j].substring(0,1)),
-                                    Integer.parseInt(array[i][j].substring(1))));
+                            new Instruction(inputTranslator.get(array[i][j].substring(0,1)),
+                                    Integer.parseInt(array[i][j].substring(2)),
+                                    inputTranslator.get(array[i][j].substring(1,2)),
+                                    true));
                 }
             }
         }
         for(Value value : Value.values())
-            ace.put(new Pair<>(10, value), new Pair<>(Decision.STAND, 0));
+            ace.put(new Pair<>(10, value), new Instruction(Decision.STAND));
 
-        var pair = new HashMap<Pair<Value, Value>, Pair<Decision,Integer>>();
+        var pair = new HashMap<Pair<Value, Value>, Instruction>();
         // i = 24
         for(int j=0;j<10;j++) {
             for(Value value : columnTranslator.get(j)) {
                 pair.put(new Pair<>(Value.ACE, value),
-                        new Pair<>(inputTranslator.get(array[24][j].substring(0, 1)),
-                        Integer.parseInt(array[24][j].substring(1))));
+                        new Instruction(inputTranslator.get(array[24][j].substring(0, 1)),
+                                Integer.parseInt(array[24][j].substring(2)),
+                                inputTranslator.get(array[24][j].substring(1,2)),
+                                true));
             }
         }
 
@@ -52,8 +58,10 @@ public class PatternReader {
                 for(Value value1 : columnTranslator.get(i-25)) {
                     for(Value value2 : columnTranslator.get(j)) {
                         pair.put(new Pair<>(value1, value2),
-                                new Pair<>(inputTranslator.get(array[i][j].substring(0,1)),
-                                        Integer.parseInt(array[i][j].substring(1))));
+                                new Instruction(inputTranslator.get(array[i][j].substring(0,1)),
+                                        Integer.parseInt(array[i][j].substring(2)),
+                                        inputTranslator.get(array[i][j].substring(1,2)),
+                                        true));
                     }
                 }
 
