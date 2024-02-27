@@ -6,6 +6,7 @@ import model.Hand;
 import model.Player;
 import model.basic.Decision;
 import model.basic.Status;
+import model.basic.Value;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -35,8 +36,28 @@ public class ConsoleRound extends AbstractRound {
         var dealerCard = deck.getNextCard();
         var dealerHand = new Hand(dealer);
         dealerHand.updateHand(dealerCard);
+        dealer.addHand(dealerHand);
         System.out.println("Dealer: ");
-        System.out.println("Hand: " + dealerCard.toString());
+        System.out.println("Hand: " + dealerCard);
+        BufferedReader reader = new BufferedReader(
+                new InputStreamReader(System.in));
+        if(dealerCard.getValue() == Value.ACE) {
+            for(Player player : players) {
+                System.out.println("Player: " + player.getPlayerId());
+                System.out.print("Do you want to buy insurance?: ");
+                switch(reader.readLine()) {
+                    case "yes", "Yes", "y", "Y" -> {
+                        var hand = player.getHands().get(0);
+                        hand.setHandInsured(true);
+                        player.setBalance(player.getBalance() - hand.getBet()*0.5);
+                    }
+
+                }
+                System.out.println();
+            }
+        }
+
+
 
         for(Player player : players) {
             player.getHands().get(0).updateHand(deck.getNextCard());
@@ -48,8 +69,7 @@ public class ConsoleRound extends AbstractRound {
             hands.addAll(player.getHands());
         }
         int handsLeftCount  = playerCount;
-        BufferedReader reader = new BufferedReader(
-                new InputStreamReader(System.in));
+
         while(handsLeftCount>0) {
             handsLeftCount = 0;
             hands.clear();
@@ -71,7 +91,8 @@ public class ConsoleRound extends AbstractRound {
                         case "double","d" -> Decision.DOUBLE;
                         case "split","p" -> Decision.SPLIT;
                         case "surrender","u" -> Decision.SURRENDER;
-                        default -> throw new IllegalStateException("Unexpected value: " + reader.readLine());
+                        default -> throw new IllegalStateException(
+                                "Unexpected value: " + reader.readLine());
                     };
                     handleDecision(null, hand, decision);
                     handsLeftCount++;
@@ -89,7 +110,8 @@ public class ConsoleRound extends AbstractRound {
         }
 
         printResults(dealerHand, hands);
-
+        finishBets();
+        clearHands();
     }
 
     @Override

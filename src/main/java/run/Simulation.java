@@ -5,6 +5,7 @@ import model.round.SimulationRound;
 import strategy.AbstractStrategy;
 import strategy.CardCounter;
 
+import java.text.DecimalFormat;
 import java.util.List;
 
 public class Simulation {
@@ -32,18 +33,25 @@ public class Simulation {
         for(Player player : players) {
             System.out.println("Player " + player.getPlayerId() + "'s balance: " + player.getBalance());
         }
+        DecimalFormat f = new DecimalFormat("##.00");
+        int handCount = listener.getHandCount();
         int resultCount = 0;
-        System.out.println("Win: " + listener.getWin());
+        System.out.println("Win: " +
+                f.format((double)listener.getWin()/handCount*100) + "%");
         resultCount+=listener.getWin();
-        System.out.println("Lose: " + listener.getLose());
+        System.out.println("Lose: " +
+                f.format((double)listener.getLose()/handCount*100) + "%");
         resultCount+=listener.getLose();
-        System.out.println("Push: " + listener.getPush());
+        System.out.println("Push: " +
+                f.format((double)listener.getPush()/handCount*100) + "%");
         resultCount+=listener.getPush();
-        System.out.println("Surrender: " + listener.getSurrender());
+        System.out.println("Surrender: " +
+                f.format((double)listener.getSurrender()/handCount*100) + "%");
         resultCount+=listener.getSurrender();
-        System.out.println("Blackjack: " + listener.getBlackjack());
+        System.out.println("Blackjack: " +
+                f.format((double)listener.getBlackjack()/handCount*100) + "%");
         resultCount+=listener.getBlackjack();
-        System.out.println("Status: "+ resultCount + "/" + listener.getHandCount());
-        System.out.println("Simulation result: " + player1.getBalance()/simulationLength*100 + "%");
+        System.out.println("Status: "+ resultCount + "/" + handCount);
+        System.out.println("Simulation result: " + player1.getBalance()/handCount*100 + "%");
     }
 }

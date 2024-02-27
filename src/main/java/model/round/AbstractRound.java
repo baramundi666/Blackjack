@@ -165,14 +165,20 @@ public abstract class AbstractRound {
         for(Player player : players) {
             hands.addAll(player.getHands());
         }
-
+        var dealerHand = dealer.getHands().get(0);
         for(Hand playerHand : hands) {
-            var result = getResult(dealer.getHands().get(0), playerHand);
+
+            var result = getResult(dealerHand, playerHand);
             if(!Objects.isNull(tracker)) tracker.notify(new Data(result));
             var player = playerHand.getPlayer();
             switch(result) {
                 case WIN -> player.setBalance(player.getBalance()+playerHand.getBet()*2);
-                case LOSE -> {}
+                case LOSE -> {
+                    // if dealer has BJ and player has bought insurance
+                    if(dealerHand.getCards().size()==2 && dealerHand.getPoints()==21 &&
+                            playerHand.isHandInsured())
+                        player.setBalance(player.getBalance()+playerHand.getBet()*1.5);
+                    }
                 case PUSH -> player.setBalance(player.getBalance()+playerHand.getBet());
                 case BLACKJACK -> player.setBalance(player.getBalance()+playerHand.getBet()*2.5);
                 case SURRENDER -> player.setBalance(player.getBalance()+playerHand.getBet()*0.5);

@@ -1,6 +1,8 @@
 package run;
 
 public class PatternDatabase {
+
+    public static final double[] standardInsurance = {1.4, 2.4, 2.7, 2.9, 3.0, 3.0, 3.1, 3.1, 3.3};
     public static final String[][] newPattern = {
             // 2     3     4     5     6     7     8     9    10     A
             {"HH0","HH0","HH0","HH0","HH0","HH0","HH0","HH0","HH0","HH0"}, //5

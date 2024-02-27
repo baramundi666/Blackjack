@@ -75,7 +75,7 @@ public class TestRound extends AbstractRound{
                         flag = false;
                     }
                     else {
-                        decision = strategy.getDecision(new CardCounter(deck.getDeckSize()),
+                        decision = strategy.getDecision(deck.getDeckSize(), new CardCounter(deck.getDeckSize()),
                                 dealerHand, hand);
                     }
                     handleDecision(null, hand, decision);

@@ -17,6 +17,27 @@ public class Main {
         //runTest();
     }
 
+    private static void runConsole() {
+        var deck = new Deck(6);
+        var round = new ConsoleRound(2, deck);
+        try {
+            round.play();
+        } catch (IOException | IllegalStateException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private static void runSimulation() {
+        int deckSize = 6;
+        int simulationLength = (int) Math.pow(10,7);
+        var patternReader = new PatternReader();
+        var newStrategy = new AnyStrategy(patternReader.readPattern(
+                PatternDatabase.basicStrategyWithCardCounting, PatternDatabase.standardInsurance));
+//        var newStrategy = new BasicStrategy();
+        var simulation = new Simulation(newStrategy, deckSize, simulationLength);
+        simulation.start();
+    }
+
     private static void runTest() {
         var two = new Card(Value.TWO, Suit.CLUB);
         var three = new Card(Value.THREE, Suit.CLUB);
@@ -34,34 +55,10 @@ public class Main {
 
         var patternReader = new PatternReader();
         var strategy = new AnyStrategy(patternReader.readPattern(
-                PatternDatabase.newPattern));
+                PatternDatabase.newPattern, PatternDatabase.standardInsurance));
         int deckSize = 6;
         var testSimulation = new TestSimulation(strategy, deckSize,
                 1000000, playerCards, dealerCard);
         testSimulation.start();
-    }
-
-    private static void runConsole() {
-        var deck = new Deck(6);
-        var round = new ConsoleRound(1, deck);
-        try {
-            round.play();
-        } catch (IOException | IllegalStateException e) {
-            throw new RuntimeException(e);
-        }
-        //Empty constructor for "Basic Strategy"
-        var basicStrategy = new BasicStrategy();
-        basicStrategy.InitializeStrategy();
-    }
-
-    private static void runSimulation() {
-        int deckSize = 6;
-        int simulationLength = (int) Math.pow(10,7);
-        var patternReader = new PatternReader();
-        var newStrategy = new AnyStrategy(patternReader.readPattern(
-                PatternDatabase.newPattern));
-//        var newStrategy = new BasicStrategy();
-        var simulation = new Simulation(newStrategy, deckSize, simulationLength);
-        simulation.start();
     }
 }

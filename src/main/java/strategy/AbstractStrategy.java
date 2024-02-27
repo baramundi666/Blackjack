@@ -7,6 +7,6 @@ public abstract class AbstractStrategy {
 
     protected Pattern pattern;
 
-    public abstract Decision getDecision(CardCounter counter, Hand dealerHand, Hand playerHand);
+    public abstract Decision getDecision(int deckSize, CardCounter counter, Hand dealerHand, Hand playerHand);
 
 }

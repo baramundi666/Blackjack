@@ -70,7 +70,7 @@ public class SimulationRound extends AbstractRound {
             }
             for (Hand hand : hands) {
                 if (hand.getStatus() == Status.PLAYING) {
-                    Decision decision = strategy.getDecision(counter, dealerHand, hand);
+                    Decision decision = strategy.getDecision(deck.getDeckSize(),counter, dealerHand, hand);
 //                    System.out.println("Player: " + hand.getPlayer().getPlayerId());
 //                    System.out.println("Hand: " + hand.getHandId());
 //                    for (Card card : hand.getCards()) {

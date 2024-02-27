@@ -17,6 +17,7 @@ public class Hand {
     private Status status = Status.PLAYING;
     private Decision decision = Decision.NONE;
     private double bet;
+    private boolean isHandInsured = false;
 
     public Hand(Player player) {
         this.player = player;
@@ -89,5 +90,13 @@ public class Hand {
 
     public void subtractFromAceCount() {
         aceCount--;
+    }
+
+    public boolean isHandInsured() {
+        return isHandInsured;
+    }
+
+    public void setHandInsured(boolean handInsured) {
+        isHandInsured = handInsured;
     }
 }

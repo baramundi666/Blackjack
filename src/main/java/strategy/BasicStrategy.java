@@ -11,7 +11,7 @@ public class BasicStrategy extends AbstractStrategy {
     // Ignores CardCounter
 
     @Override
-    public Decision getDecision(CardCounter counter, Hand dealerHand, Hand playerHand) {
+    public Decision getDecision(int deckSize, CardCounter counter, Hand dealerHand, Hand playerHand) {
         Decision decision;
         var playerCards = playerHand.getCards();
         var dealerCards = dealerHand.getCards();
@@ -259,6 +259,6 @@ public class BasicStrategy extends AbstractStrategy {
             pair.put(new Pair<>(i, Value.ACE), new Instruction(Decision.STAND));
         }
 
-        this.pattern = new Pattern(normal, ace, pair);
+        this.pattern = new Pattern(normal, ace, pair, null);
     }
 }

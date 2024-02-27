@@ -8,7 +8,7 @@ import java.util.*;
 public class PatternReader {
     private final Map<String, Decision> inputTranslator = new HashMap<>();
     private final Map<Integer, Set<Value>> columnTranslator = new HashMap<>();
-    public Pattern readPattern(String[][] array) {
+    public Pattern readPattern(String[][] patternArray, double[] insuranceArray) {
         initialize();
 
         var normal = new HashMap<Pair<Integer, Value>, Instruction>();
@@ -16,9 +16,9 @@ public class PatternReader {
             for(int j=0;j<10;j++) {
                 for(Value value : columnTranslator.get(j)) {
                     normal.put(new Pair<>(i+5, value),
-                            new Instruction(inputTranslator.get(array[i][j].substring(0,1)),
-                                    Integer.parseInt(array[i][j].substring(2)),
-                                    inputTranslator.get(array[i][j].substring(1,2)),
+                            new Instruction(inputTranslator.get(patternArray[i][j].substring(0,1)),
+                                    Integer.parseInt(patternArray[i][j].substring(2)),
+                                    inputTranslator.get(patternArray[i][j].substring(1,2)),
                                     true));
                 }
             }
@@ -31,9 +31,9 @@ public class PatternReader {
             for(int j=0;j<10;j++) {
                 for(Value value : columnTranslator.get(j)) {
                     ace.put(new Pair<>(i-14, value),
-                            new Instruction(inputTranslator.get(array[i][j].substring(0,1)),
-                                    Integer.parseInt(array[i][j].substring(2)),
-                                    inputTranslator.get(array[i][j].substring(1,2)),
+                            new Instruction(inputTranslator.get(patternArray[i][j].substring(0,1)),
+                                    Integer.parseInt(patternArray[i][j].substring(2)),
+                                    inputTranslator.get(patternArray[i][j].substring(1,2)),
                                     true));
                 }
             }
@@ -46,9 +46,9 @@ public class PatternReader {
         for(int j=0;j<10;j++) {
             for(Value value : columnTranslator.get(j)) {
                 pair.put(new Pair<>(Value.ACE, value),
-                        new Instruction(inputTranslator.get(array[24][j].substring(0, 1)),
-                                Integer.parseInt(array[24][j].substring(2)),
-                                inputTranslator.get(array[24][j].substring(1,2)),
+                        new Instruction(inputTranslator.get(patternArray[24][j].substring(0, 1)),
+                                Integer.parseInt(patternArray[24][j].substring(2)),
+                                inputTranslator.get(patternArray[24][j].substring(1,2)),
                                 true));
             }
         }
@@ -58,16 +58,26 @@ public class PatternReader {
                 for(Value value1 : columnTranslator.get(i-25)) {
                     for(Value value2 : columnTranslator.get(j)) {
                         pair.put(new Pair<>(value1, value2),
-                                new Instruction(inputTranslator.get(array[i][j].substring(0,1)),
-                                        Integer.parseInt(array[i][j].substring(2)),
-                                        inputTranslator.get(array[i][j].substring(1,2)),
+                                new Instruction(inputTranslator.get(patternArray[i][j].substring(0,1)),
+                                        Integer.parseInt(patternArray[i][j].substring(2)),
+                                        inputTranslator.get(patternArray[i][j].substring(1,2)),
                                         true));
                     }
                 }
 
             }
         }
-        return new Pattern(normal, ace, pair);
+
+        return new Pattern(normal, ace, pair, readInsurance(insuranceArray));
+    }
+
+    private HashMap<Integer, Double> readInsurance(double[] insuranceArray) {
+        var insurance = new HashMap<Integer, Double>();
+        // Integer - number of decks, Double - real count
+        for(int i=0;i<insuranceArray.length;i++) {
+            insurance.put(i+1,insuranceArray[i]);
+        }
+        return insurance;
     }
 
     private void initialize() {
