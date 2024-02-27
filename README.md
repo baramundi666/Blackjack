@@ -7,5 +7,4 @@
 - Lose All to a Natural
 - Early Surrender
 - Blackjack pays 3:2
-- Insurance pays 2:1 *(to be implemented)*
-- No side bets
+- Insurance pays 2:1
