@@ -1,9 +1,11 @@
-package run;
+package run.simulation;
 
-import model.*;
+import model.basic.Deck;
+import model.basic.Player;
 import model.round.SimulationRound;
-import strategy.AbstractStrategy;
-import strategy.CardCounter;
+import run.statistics.Tracker;
+import model.strategy.AbstractStrategy;
+import model.strategy.CardCounter;
 
 import java.text.DecimalFormat;
 import java.util.List;

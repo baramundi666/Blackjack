@@ -1,6 +1,6 @@
-package strategy;
+package model.pattern;
 
-import model.basic.Decision;
+import model.elementary.Decision;
 
 public class Instruction {
     private final Decision firstOption;

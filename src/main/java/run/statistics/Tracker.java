@@ -1,8 +1,9 @@
-package run;
+package run.statistics;
 
-import model.basic.Result;
+import run.statistics.Data;
+import run.statistics.Listener;
 
-public class Tracker implements Listener{
+public class Tracker implements Listener {
     private int win = 0;
     private int lose = 0;
     private int blackjack = 0;

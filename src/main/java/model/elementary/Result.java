@@ -1,4 +1,4 @@
-package model.basic;
+package model.elementary;
 
 public enum Result {
     WIN, LOSE, PUSH, BLACKJACK, SURRENDER;

@@ -1,11 +1,12 @@
-package run;
+package run.simulation;
 
-import model.Card;
-import model.Deck;
-import model.Player;
-import model.basic.Decision;
+import model.basic.Card;
+import model.basic.Deck;
+import model.basic.Player;
+import model.elementary.Decision;
 import model.round.TestRound;
-import strategy.AnyStrategy;
+import run.statistics.Tracker;
+import model.strategy.AnyStrategy;
 
 import java.util.List;
 

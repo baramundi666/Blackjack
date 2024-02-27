@@ -1,4 +1,4 @@
-package model.basic;
+package model.elementary;
 
 public enum Suit {
     SPADE, HEART, DIAMOND, CLUB;

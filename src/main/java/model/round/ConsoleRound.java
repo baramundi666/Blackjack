@@ -1,12 +1,12 @@
 package model.round;
 
-import model.Card;
-import model.Deck;
-import model.Hand;
-import model.Player;
-import model.basic.Decision;
-import model.basic.Status;
-import model.basic.Value;
+import model.basic.Card;
+import model.basic.Deck;
+import model.basic.Hand;
+import model.basic.Player;
+import model.elementary.Decision;
+import model.elementary.Status;
+import model.elementary.Value;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,8 +1,11 @@
-package strategy;
+package model.strategy;
 
-import model.Hand;
-import model.basic.Decision;
-import model.basic.Value;
+import model.basic.Hand;
+import model.elementary.Decision;
+import model.elementary.Pair;
+import model.elementary.Value;
+import model.pattern.Instruction;
+import model.pattern.Pattern;
 
 import java.util.HashMap;
 import java.util.List;

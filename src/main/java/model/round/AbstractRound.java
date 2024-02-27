@@ -1,12 +1,15 @@
 package model.round;
 
-import model.*;
-import model.basic.Decision;
-import model.basic.Result;
-import model.basic.Status;
-import run.Data;
-import run.Tracker;
-import strategy.CardCounter;
+import model.basic.Card;
+import model.basic.Deck;
+import model.basic.Hand;
+import model.basic.Player;
+import model.elementary.Decision;
+import model.elementary.Result;
+import model.elementary.Status;
+import run.statistics.Data;
+import run.statistics.Tracker;
+import model.strategy.CardCounter;
 
 import java.io.IOException;
 import java.util.ArrayList;

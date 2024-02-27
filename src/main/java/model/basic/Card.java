@@ -1,7 +1,7 @@
-package model;
+package model.basic;
 
-import model.basic.Suit;
-import model.basic.Value;
+import model.elementary.Suit;
+import model.elementary.Value;
 
 public class Card {
     private final Value value;

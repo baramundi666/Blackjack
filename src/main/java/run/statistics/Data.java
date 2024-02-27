@@ -1,6 +1,6 @@
-package run;
+package run.statistics;
 
-import model.basic.Result;
+import model.elementary.Result;
 
 public class Data {
     private  Result result;

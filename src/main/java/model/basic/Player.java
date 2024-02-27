@@ -1,4 +1,6 @@
-package model;
+package model.basic;
+
+import model.basic.Hand;
 
 import java.util.ArrayList;
 import java.util.List;

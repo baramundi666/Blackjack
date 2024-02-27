@@ -1,7 +1,8 @@
-package strategy;
+package model.strategy;
 
-import model.Hand;
-import model.basic.Decision;
+import model.basic.Hand;
+import model.elementary.Decision;
+import model.pattern.Pattern;
 
 public abstract class AbstractStrategy {
 

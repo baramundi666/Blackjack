@@ -1,7 +1,8 @@
-package model;
+package model.basic;
 
-import model.basic.Suit;
-import model.basic.Value;
+import model.basic.Card;
+import model.elementary.Suit;
+import model.elementary.Value;
 
 import java.util.ArrayList;
 import java.util.Collections;

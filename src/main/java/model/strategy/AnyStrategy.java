@@ -1,11 +1,10 @@
-package strategy;
+package model.strategy;
 
-import model.Hand;
-import model.basic.Decision;
-import model.basic.Value;
-
-import java.util.Objects;
-import java.util.concurrent.DelayQueue;
+import model.basic.Hand;
+import model.elementary.Decision;
+import model.elementary.Pair;
+import model.elementary.Value;
+import model.pattern.Pattern;
 
 public class AnyStrategy extends AbstractStrategy{
     public AnyStrategy(Pattern pattern) {

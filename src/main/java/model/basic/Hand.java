@@ -1,8 +1,8 @@
-package model;
+package model.basic;
 
-import model.basic.Decision;
-import model.basic.Status;
-import model.basic.Value;
+import model.elementary.Decision;
+import model.elementary.Status;
+import model.elementary.Value;
 
 import java.util.LinkedList;
 import java.util.List;

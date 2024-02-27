@@ -1,4 +1,4 @@
-package model.basic;
+package model.elementary;
 
 public enum Value {
     ACE, KING, QUEEN, JACK, TEN, NINE,

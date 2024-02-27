@@ -1,4 +1,4 @@
-package run;
+package run.statistics;
 
 public class PatternDatabase {
 

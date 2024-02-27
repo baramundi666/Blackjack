@@ -1,6 +1,6 @@
-package strategy;
+package model.strategy;
 
-import model.Card;
+import model.basic.Card;
 
 public class CardCounter {
     private int currentCount = 0;

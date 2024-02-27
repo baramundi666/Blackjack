@@ -1,7 +1,7 @@
-package strategy;
+package model.pattern;
 
-import model.basic.Decision;
-import model.basic.Value;
+import model.elementary.Value;
+import model.elementary.Pair;
 
 import java.util.HashMap;
 
