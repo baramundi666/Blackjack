@@ -10,7 +10,6 @@ import model.strategy.AnyStrategy;
 import run.simulation.Simulation;
 import run.simulation.TestSimulation;
 import run.statistics.PatternDatabase;
-import strategy.*;
 
 import java.io.IOException;
 import java.util.List;
@@ -34,11 +33,12 @@ public class Main {
 
     private static void runSimulation() {
         int deckSize = 6;
-        int simulationLength = (int) Math.pow(10,7);
+        int simulationLength = (int) Math.pow(10,8);
         var patternReader = new PatternReader();
+//        var newStrategy = new AnyStrategy(patternReader.readPattern(
+//                PatternDatabase.basicStrategyWithCardCounting, PatternDatabase.standardInsurance));
         var newStrategy = new AnyStrategy(patternReader.readPattern(
                 PatternDatabase.basicStrategyWithCardCounting, PatternDatabase.standardInsurance));
-//        var newStrategy = new BasicStrategy();
         var simulation = new Simulation(newStrategy, deckSize, simulationLength);
         simulation.start();
     }

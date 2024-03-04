@@ -73,6 +73,7 @@ public class PatternReader {
     }
 
     private HashMap<Integer, Double> readInsurance(double[] insuranceArray) {
+        if(Objects.isNull(insuranceArray)) return null;
         var insurance = new HashMap<Integer, Double>();
         // Integer - number of decks, Double - real count
         for(int i=0;i<insuranceArray.length;i++) {

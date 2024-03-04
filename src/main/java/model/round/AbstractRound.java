@@ -7,6 +7,7 @@ import model.basic.Player;
 import model.elementary.Decision;
 import model.elementary.Result;
 import model.elementary.Status;
+import model.elementary.Value;
 import run.statistics.Data;
 import run.statistics.Tracker;
 import model.strategy.CardCounter;
@@ -52,7 +53,6 @@ public abstract class AbstractRound {
                         hand.setPoints(currentPoints-10);
                         currentPoints= hand.getPoints();
                     }
-                    hand.setStatus(Status.WAITING);
                     if(currentPoints>21) {
                         hand.setStatus(Status.BUST);
                     }
@@ -78,13 +78,13 @@ public abstract class AbstractRound {
                         hand.setPoints(currentPoints-10);
                         currentPoints = hand.getPoints();
                     }
-                    hand.setStatus(Status.WAITING);
                     if(currentPoints>21) {
                         hand.setStatus(Status.BUST);
                     }
                 }
             }
             case SPLIT -> {
+                hand.setHasBeenSplit(true);
                 var player = hand.getPlayer();
                 var card = hand.splitHand();
                 var nextCard = deck.getNextCard();
@@ -94,6 +94,7 @@ public abstract class AbstractRound {
                     counter.updateCurrentCardNumber();
                 }
                 var newHand = new Hand(player);
+                newHand.setHasBeenSplit(true);
                 newHand.updateHand(card);
                 nextCard = deck.getNextCard();
                 newHand.updateHand(nextCard);
@@ -104,6 +105,11 @@ public abstract class AbstractRound {
                 player.setBalance(player.getBalance()- hand.getBet());
                 newHand.setBet(hand.getBet());
                 player.addHand(newHand);
+                // Split Aces -> 1 card dealt for each ace, no Blackjack
+                if(card.getValue() == Value.ACE) {
+                    hand.setStatus(Status.WAITING);
+                    newHand.setStatus(Status.WAITING);
+                }
             }
             case SURRENDER -> {
                 hand.setStatus(Status.BUST);
@@ -144,11 +150,13 @@ public abstract class AbstractRound {
             result = Result.LOSE;
         }
         else if(playerPoints==21 && playerHand.getCards().size()==2 &&
-                !(dealerPoints==21 && dealerHand.getCards().size()==2)){
+                !(dealerPoints==21 && dealerHand.getCards().size()==2) &&
+                !playerHand.hasBeenSplit()){
+            // No Blackjack after Splitting Aces
             result = Result.BLACKJACK;
         }
-        else if(dealerPoints==21 && dealerHand.getCards().size()==2 &&
-                (playerPoints==21 && playerHand.getCards().size()>2)) {
+        // Lose All to a Natural
+        else if(dealerPoints==21 && dealerHand.getCards().size()==2) {
             result = Result.LOSE;
         }
         else if(dealerPoints==playerPoints){

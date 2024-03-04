@@ -18,6 +18,8 @@ public class Hand {
     private Decision decision = Decision.NONE;
     private double bet;
     private boolean isHandInsured = false;
+    private boolean hasBeenSplit = false;
+
 
     public Hand(Player player) {
         this.player = player;
@@ -98,5 +100,13 @@ public class Hand {
 
     public void setHandInsured(boolean handInsured) {
         isHandInsured = handInsured;
+    }
+
+    public boolean hasBeenSplit() {
+        return hasBeenSplit;
+    }
+
+    public void setHasBeenSplit(boolean hasBeenSplit) {
+        this.hasBeenSplit = hasBeenSplit;
     }
 }

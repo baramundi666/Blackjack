@@ -5,6 +5,7 @@ import model.basic.Hand;
 import model.basic.Player;
 import model.elementary.Decision;
 import model.elementary.Status;
+import model.elementary.Value;
 import model.strategy.AbstractStrategy;
 import model.strategy.CardCounter;
 
@@ -89,8 +90,15 @@ public class SimulationRound extends AbstractRound {
 
         boolean areAllHandsOver = true;
         for(Hand hand : hands) {
+            // If Blackjack, no reason for dealer to deal rest of the cards
+            if(hand.getCards().size()==2 && hand.getPoints()==21 &&
+            dealerHand.getPoints()!=11 && dealerHand.getPoints()!=10) continue;
             var status = hand.getStatus();
-            if(status==Status.PLAYING || status==Status.WAITING) areAllHandsOver=false;
+            if (status == Status.PLAYING || status == Status.WAITING) {
+                // Dealer has to deal his cards
+                areAllHandsOver = false;
+                break;
+            }
         }
         if(!areAllHandsOver) {
             while (dealerHand.getPoints() < 17) {
