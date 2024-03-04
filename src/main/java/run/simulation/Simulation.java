@@ -35,25 +35,31 @@ public class Simulation {
         for(Player player : players) {
             System.out.println("Player " + player.getPlayerId() + "'s balance: " + player.getBalance());
         }
-        DecimalFormat f = new DecimalFormat("##.00");
         int handCount = listener.getHandCount();
         int resultCount = 0;
         System.out.println("Win: " +
-                f.format((double)listener.getWin()/handCount*100) + "%");
+                getPercentage(listener.getWin(), handCount) + "%");
         resultCount+=listener.getWin();
         System.out.println("Lose: " +
-                f.format((double)listener.getLose()/handCount*100) + "%");
+                getPercentage(listener.getLose(), handCount) + "%");
         resultCount+=listener.getLose();
         System.out.println("Push: " +
-                f.format((double)listener.getPush()/handCount*100) + "%");
+                getPercentage(listener.getPush(), handCount) + "%");
         resultCount+=listener.getPush();
         System.out.println("Surrender: " +
-                f.format((double)listener.getSurrender()/handCount*100) + "%");
+                getPercentage(listener.getSurrender(), handCount) + "%");
         resultCount+=listener.getSurrender();
         System.out.println("Blackjack: " +
-                f.format((double)listener.getBlackjack()/handCount*100) + "%");
+                getPercentage(listener.getBlackjack(), handCount) + "%");
         resultCount+=listener.getBlackjack();
         System.out.println("Status: "+ resultCount + "/" + handCount);
-        System.out.println("Simulation result: " + player1.getBalance()/handCount*100 + "%");
+        System.out.println("Simulation result: " +
+                player1.getBalance()/handCount*100 + "%");
+    }
+
+    private double getPercentage(int value, int handCount) {
+        double val = (double) value / handCount;
+        val*=10000;
+        return (double) Math.round(val) /100;
     }
 }
