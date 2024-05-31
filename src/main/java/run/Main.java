@@ -13,12 +13,18 @@ import run.statistics.PatternDatabase;
 
 import java.io.IOException;
 import java.util.List;
+import javafx.application.Application;
 
 public class Main {
     public static void main(String[] args) {
         //runConsole();
-        runSimulation();
+        //runSimulation();
         //runTest();
+        runUI();
+    }
+
+    private static void runUI() {
+        Application.launch(TableApp.class);
     }
 
     private static void runConsole() {
@@ -33,7 +39,7 @@ public class Main {
 
     private static void runSimulation() {
         int deckSize = 6;
-        int simulationLength = (int) Math.pow(10,8);
+        int simulationLength = (int) Math.pow(10,7);
         var patternReader = new PatternReader();
 //        var newStrategy = new AnyStrategy(patternReader.readPattern(
 //                PatternDatabase.basicStrategyWithCardCounting, PatternDatabase.standardInsurance));

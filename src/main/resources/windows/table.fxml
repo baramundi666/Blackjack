@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<BorderPane maxHeight="600.0" maxWidth="1200.0" minHeight="600.0" minWidth="1200.0" prefHeight="600.0" prefWidth="1200.0" style="-fx-background-color: #f5f1f5;" xmlns:fx="http://javafx.com/fxml" fx:controller="presenter.TablePresenter">
+    <center>
+        <BorderPane maxHeight="500.0" maxWidth="1000.0" minHeight="500.0" minWidth="1000.0" prefHeight="500.0" prefWidth="1000.0" style="-fx-background-color: green;" xmlns:fx="http://javafx.com/fxml">
+            <BorderPane.margin>
+                <Insets left="0.0" top="25.0"/>
+            </BorderPane.margin>
+        </BorderPane>
+    </center>
+    <left>
+        <VBox alignment="BOTTOM_LEFT" prefHeight="31.0" prefWidth="161.0">
+            <Button onAction="#onLaunchClicked" mnemonicParsing="false" prefHeight="25.0"
+                    prefWidth="147.0" text="Start / Reset"/>
+        </VBox>
+    </left>
+    <bottom>
+        <VBox alignment="BOTTOM_RIGHT" prefHeight="31.0" prefWidth="161.0">
+            <HBox alignment="BOTTOM_RIGHT">
+                <Button onAction="#onHITClicked" mnemonicParsing="false" prefHeight="25.0"
+                        prefWidth="147.0" text="HIT"/>
+                <Button onAction="#onSTANDClicked" mnemonicParsing="false" prefHeight="25.0"
+                        prefWidth="147.0" text="STAND"/>
+            </HBox>
+            <HBox alignment="BOTTOM_RIGHT">
+                <Button onAction="#onDOUBLEClicked" mnemonicParsing="false" prefHeight="25.0"
+                        prefWidth="147.0" text="DOUBLE"/>
+                <Button onAction="#onSPLITClicked" mnemonicParsing="false" prefHeight="25.0"
+                        prefWidth="147.0" text="SPLIT"/>
+            </HBox>
+        </VBox>
+    </bottom>
+</BorderPane>

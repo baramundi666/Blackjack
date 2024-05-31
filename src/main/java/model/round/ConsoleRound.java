@@ -12,6 +12,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.List;
 
 public class ConsoleRound extends AbstractRound {
 
@@ -112,6 +113,28 @@ public class ConsoleRound extends AbstractRound {
         printResults(dealerHand, hands);
         finishBets();
         clearHands();
+    }
+
+    private void printResults(Hand dealerHand, List<Hand> hands) {
+        System.out.println();
+        System.out.println("Results:");
+        System.out.println();
+        System.out.println("Dealer: ");
+        for(Card card : dealerHand.getCards()) {
+            System.out.print(card.toString() + " ");
+        }
+        System.out.println("(Points: " + dealerHand.getPoints() + ")");
+
+        for(Hand hand: hands) {
+            System.out.println("Player: " + hand.getPlayer().getPlayerId());
+            System.out.println("Hand: " + hand.getHandId());
+            for (Card card : hand.getCards()) {
+                System.out.print(card.toString() + " ");
+            }
+            System.out.print("(Points: " + hand.getPoints() + ", ");
+            System.out.println("Result:" + getResult(dealerHand, hand).toString() + ")");
+            System.out.println();
+        }
     }
 
     @Override
