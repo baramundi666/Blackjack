@@ -18,9 +18,9 @@ import javafx.application.Application;
 public class Main {
     public static void main(String[] args) {
         //runConsole();
-        //runSimulation();
+        runSimulation();
         //runTest();
-        runUI();
+        //runUI();
     }
 
     private static void runUI() {
@@ -39,12 +39,12 @@ public class Main {
 
     private static void runSimulation() {
         int deckSize = 6;
-        int simulationLength = (int) Math.pow(10,7);
+        int simulationLength = (int) Math.pow(10,8);
         var patternReader = new PatternReader();
 //        var newStrategy = new AnyStrategy(patternReader.readPattern(
 //                PatternDatabase.basicStrategyWithCardCounting, PatternDatabase.standardInsurance));
         var newStrategy = new AnyStrategy(patternReader.readPattern(
-                PatternDatabase.basicStrategyWithCardCounting, PatternDatabase.standardInsurance));
+                PatternDatabase.newPattern, null));
         var simulation = new Simulation(newStrategy, deckSize, simulationLength);
         simulation.start();
     }

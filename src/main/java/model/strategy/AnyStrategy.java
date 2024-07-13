@@ -59,14 +59,22 @@ public class AnyStrategy extends AbstractStrategy{
             decision = pattern.normal().get(
                             new Pair<>(playerHand.getPoints(), dealerCards.get(0).getValue()))
                     .getInstruction(realCount);
-            // not possible to double
-            if(playerHand.getCards().size()>2) {
-                if(decision==Decision.DOUBLE) decision = Decision.HIT;
-                else if(decision==Decision.SURRENDER) {
-                    if(playerHand.getPoints()==17) decision = Decision.STAND;
-                    else decision = Decision.HIT;
-                }
+        }
+
+        // not possible to double/surrender after two initial cards
+        if(playerHand.getCards().size()>2) {
+            if(decision==Decision.DOUBLE) decision = Decision.HIT;
+            else if(decision==Decision.SURRENDER) {
+                if(playerHand.getPoints()>=17) decision = Decision.STAND;
+                else decision = Decision.HIT;
             }
+        }
+
+        // not possible to surrender on dealer's ace
+        if(decision==Decision.SURRENDER &&
+                dealerHand.getCards().get(0).getValue() == Value.ACE) {
+            if(playerHand.getPoints()>=17) decision = Decision.STAND;
+            else decision = Decision.HIT;
         }
 
         return decision;
