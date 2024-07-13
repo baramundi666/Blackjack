@@ -6,6 +6,9 @@ import javafx.fxml.FXML;
 import javafx.geometry.HPos;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.RowConstraints;
@@ -27,39 +30,60 @@ import static java.lang.Math.max;
 public class TablePresenter implements ChangeListener {
 
 
+
+
     private final double width = 800;
     private final double height = 400;
     private final double offset = 50;
 
+    @FXML
+    public GridPane table;
+
     private Decision currentDecision = Decision.NONE;
+    private TableRound round;
 
     @Override
-    public void tableInitialized(int playerCount) {
+    public void tableInitialized() {
         Platform.runLater(() -> {
-            drawTable(playerCount);
+            drawTable();
         });
     }
 
-    public void drawTable(int playerCount) {
-        double start;
+    public void drawTable() {
+        double cellSize = 100;
 
-//        mapGrid.getColumnConstraints().add(new ColumnConstraints(cellSize));
-//        mapGrid.getRowConstraints().add(new RowConstraints(cellSize));
+        var players = round.getPlayers();
+        for(Player player : players) {
+            var hands = player.getHands();
+            for(Hand hand : hands) {
+                var cards = hand.getCards();
+                for(Card card : cards) {
+                    System.out.println("a");;
+                    var image = new Image(card.getImageURL());
+                    table.add(new ImageView(image), 0, 0);
+                }
+            }
+
+        }
+
+
+//        table.getColumnConstraints().add(new ColumnConstraints(cellSize));
+//        table.getRowConstraints().add(new RowConstraints(cellSize));
 //        Label axis = new Label("y\\x");
 //        axis.setTextFill(Paint.valueOf("black"));
-//        mapGrid.add(axis, 0, 0);
+//        table.add(axis, 0, 0);
 //        GridPane.setHalignment(axis, HPos.CENTER);
 //
 //        for (int i = 0; i < height; i++) {
-//            mapGrid.getRowConstraints().add(new RowConstraints(cellSize));
+//            table.getRowConstraints().add(new RowConstraints(cellSize));
 //            Label label = new Label(String.valueOf(i));
-//            mapGrid.add(label, 0, i + 1);
+//            table.add(label, 0, i + 1);
 //            GridPane.setHalignment(label, HPos.CENTER);
 //        }
 //        for (int i = 0; i < width; i++) {
-//            mapGrid.getColumnConstraints().add(new ColumnConstraints(cellSize));
+//            table.getColumnConstraints().add(new ColumnConstraints(cellSize));
 //            var label = new Label(String.valueOf(i));
-//            mapGrid.add(label, i + 1, 0);
+//            table.add(label, i + 1, 0);
 //            GridPane.setHalignment(label, HPos.CENTER);
 //        }
     }
@@ -87,7 +111,14 @@ public class TablePresenter implements ChangeListener {
 
     @Override
     public Decision askPlayerDecision(Player player, Hand hand) {
-        return null;
+        int i = 0;
+        while(currentDecision == Decision.NONE) {
+            i++;
+        };
+        System.out.println(i);
+        var dec = currentDecision;
+        currentDecision = Decision.NONE;
+        return dec;
     }
 
     @Override
@@ -102,11 +133,11 @@ public class TablePresenter implements ChangeListener {
 
     public void onLaunchClicked() {
         var deck = new Deck(6);
-        var playerCount = 2;
-        tableInitialized(playerCount);
-        var round = new TableRound(playerCount, deck, this);
+        var playerCount = 1;
+        tableInitialized();
         try {
             while(true) {
+                round = new TableRound(playerCount, deck, this);
                 round.play();
             }
         } catch (IOException | IllegalStateException e) {

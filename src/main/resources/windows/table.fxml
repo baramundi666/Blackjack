@@ -12,11 +12,11 @@
 <?import javafx.scene.image.Image?>
 <BorderPane maxHeight="600.0" maxWidth="1200.0" minHeight="600.0" minWidth="1200.0" prefHeight="600.0" prefWidth="1200.0" style="-fx-background-color: #f5f1f5;" xmlns:fx="http://javafx.com/fxml" fx:controller="presenter.TablePresenter">
     <center>
-        <BorderPane maxHeight="500.0" maxWidth="1000.0" minHeight="500.0" minWidth="1000.0" prefHeight="500.0" prefWidth="1000.0" style="-fx-background-color: green;" xmlns:fx="http://javafx.com/fxml">
-            <BorderPane.margin>
+        <GridPane fx:id="table" maxHeight="500.0" maxWidth="1000.0" minHeight="500.0" minWidth="1000.0" prefHeight="500.0" prefWidth="1000.0" style="-fx-background-color: green;" xmlns:fx="http://javafx.com/fxml">
+            <GridPane.margin>
                 <Insets left="0.0" top="25.0"/>
-            </BorderPane.margin>
-        </BorderPane>
+            </GridPane.margin>
+        </GridPane>
     </center>
     <left>
         <VBox alignment="BOTTOM_LEFT" prefHeight="31.0" prefWidth="161.0">

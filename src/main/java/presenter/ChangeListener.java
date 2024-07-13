@@ -6,8 +6,10 @@ import model.basic.Player;
 import model.elementary.Answer;
 import model.elementary.Decision;
 
+import java.util.List;
+
 public interface ChangeListener {
-    void tableInitialized(int playerCount);
+    void tableInitialized();
     void updatePlayerHand(Player player, Hand hand);
     void updateDealerHand(Hand hand);
     

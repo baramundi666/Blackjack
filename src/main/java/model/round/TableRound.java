@@ -25,6 +25,9 @@ public class TableRound extends AbstractRound{
     public TableRound(int playerCount, Deck deck, TablePresenter listener) {
         super(playerCount, deck);
         this.listener = listener;
+        for(int i=0;i<playerCount;i++) {
+            players.add(new Player());
+        }
     }
 
 
@@ -38,7 +41,6 @@ public class TableRound extends AbstractRound{
             listener.updatePlayerHand(player, newHand);
         }
 
-        makeBets();
 
         var dealerCard = deck.getNextCard();
         var dealerHand = new Hand(dealer);
@@ -51,8 +53,8 @@ public class TableRound extends AbstractRound{
         if(dealerCard.getValue() == Value.ACE) {
             for(Player player : players) {
                 var answer = listener.askInsurance(player);
-//                System.out.println("Player: " + player.getPlayerId());
-//                System.out.print("Do you want to buy insurance?: ");
+                System.out.println("Player: " + player.getPlayerId());
+                System.out.print("Do you want to buy insurance?: ");
                 switch(answer) {
                     case YES -> {
                         var hand = player.getHands().get(0);
@@ -60,7 +62,7 @@ public class TableRound extends AbstractRound{
                         player.setBalance(player.getBalance() - hand.getBet()*0.5);
                     }
                 }
-//                System.out.println();
+                System.out.println();
             }
         }
 
@@ -86,13 +88,13 @@ public class TableRound extends AbstractRound{
             }
             for (Hand hand : hands) {
                 if (hand.getStatus() == Status.PLAYING) {
-//                    System.out.println("Player: " + hand.getPlayer().getPlayerId());
-//                    System.out.println("Hand: " + hand.getHandId());
-//                    for (Card card : hand.getCards()) {
-//                        System.out.print(card.toString() + " ");
-//                    }
-//                    System.out.println();
-//                    System.out.print("Input your decision: ");
+                    System.out.println("Player: " + hand.getPlayer().getPlayerId());
+                    System.out.println("Hand: " + hand.getHandId());
+                    for (Card card : hand.getCards()) {
+                        System.out.print(card.toString() + " ");
+                    }
+                    System.out.println();
+                    System.out.print("Input your decision: ");
                     var decision = listener.askPlayerDecision(hand.getPlayer(), hand);
                     handleDecision(null, hand, decision);
                     handsLeftCount++;

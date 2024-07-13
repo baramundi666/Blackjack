@@ -1,6 +1,5 @@
 package model.round;
 
-import model.basic.Card;
 import model.basic.Deck;
 import model.basic.Hand;
 import model.basic.Player;
@@ -27,6 +26,10 @@ public abstract class AbstractRound {
     public AbstractRound(int playerCount, Deck deck) {
         this.playerCount = playerCount;
         this.deck = deck;
+    }
+
+    public List<Player> getPlayers() {
+        return players;
     }
 
     public void registerListener(Tracker tracker) {
