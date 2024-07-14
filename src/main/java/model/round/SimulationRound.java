@@ -85,8 +85,10 @@ public class SimulationRound extends AbstractRound {
                 }
             }
         }
+        synchronized (tracker) {
+            tracker.setHandCount(tracker.getHandCount()+hands.size());
+        }
 
-        tracker.setHandCount(tracker.getHandCount()+hands.size());
 
         boolean areAllHandsOver = true;
         for(Hand hand : hands) {

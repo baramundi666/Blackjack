@@ -11,10 +11,16 @@
 - Blackjack pays 3:2
 - Insurance pays 2:1
 
-## Basic strategy simulation results:
-- Win: $\approx38.31$%
+## Simulation example:
+### Simulation parameters:
+- strategy: *Basic Strategy* based on ***Professional Blackjack*** by Stanford Wong
+- hands: $10^9$
+- threads: 4
+- time: 16min 10sec
+### Simulation results:
+- Win: $\approx38.3$%
 - Lose: $\approx44.9$%
 - Push: $\approx7.9$%
 - Surrender: $\approx4.37$%
-- Blackjack: $\approx4.53$%
-- Casino's edge: $\approx0.2358$%
+- Blackjack: $\approx4.52$%
+- Casino's edge: $\approx0.2508$%

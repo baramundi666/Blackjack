@@ -161,7 +161,10 @@ public abstract class AbstractRound {
         for(Hand playerHand : hands) {
 
             var result = getResult(dealerHand, playerHand);
-            if(!Objects.isNull(tracker)) tracker.notify(new Data(result));
+            synchronized (tracker) {
+                if(!Objects.isNull(tracker)) tracker.notify(new Data(result));
+            }
+
             var player = playerHand.getPlayer();
             switch(result) {
                 case WIN -> player.setBalance(player.getBalance()+playerHand.getBet()*2);

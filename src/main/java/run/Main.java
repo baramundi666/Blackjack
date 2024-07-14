@@ -12,8 +12,16 @@ import run.simulation.TestSimulation;
 import run.statistics.PatternDatabase;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Future;
+import java.util.concurrent.TimeUnit;
+
 import javafx.application.Application;
+import run.statistics.Tracker;
+
+import static java.util.concurrent.Executors.newFixedThreadPool;
 
 public class Main {
     public static void main(String[] args) {
@@ -38,15 +46,40 @@ public class Main {
     }
 
     private static void runSimulation() {
-        int deckSize = 6;
-        int simulationLength = (int) Math.pow(10,8);
+        // Concurrency
+        int n = 4;
+        List<Future<?>> futures = new ArrayList<Future<?>>();
+        ExecutorService executor = newFixedThreadPool(n);
+
+        // Strategy
         var patternReader = new PatternReader();
 //        var newStrategy = new AnyStrategy(patternReader.readPattern(
 //                PatternDatabase.basicStrategyWithCardCounting, PatternDatabase.standardInsurance));
         var newStrategy = new AnyStrategy(patternReader.readPattern(
                 PatternDatabase.newPattern, null));
-        var simulation = new Simulation(newStrategy, deckSize, simulationLength);
-        simulation.start();
+
+        // Simulation
+        int deckSize = 6;
+        int simulationLength = (int) Math.pow(10,9);
+        var listener = new Tracker();
+        for(int i=0; i<n; i++) {
+            var simulation = new Simulation(newStrategy, listener, deckSize, simulationLength/n);
+            listener.addSimulation(simulation);
+            var thread = new Thread(simulation);
+            Future<?> f = executor.submit(thread);
+            futures.add(f);
+        }
+
+        try {
+            for(Future<?> future : futures)
+                future.get();
+            listener.getResults();
+            executor.shutdown();
+        }
+        catch (Exception e) {
+            System.out.println("ERROR WITH CONCURRENCY");
+        }
+
     }
 
     private static void runTest() {
