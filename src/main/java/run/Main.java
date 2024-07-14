@@ -60,7 +60,7 @@ public class Main {
 
         // Simulation
         int deckSize = 6;
-        int simulationLength = (int) Math.pow(10,9);
+        int simulationLength = (int) Math.pow(10,8);
         var listener = new Tracker();
         for(int i=0; i<n; i++) {
             var simulation = new Simulation(newStrategy, listener, deckSize, simulationLength/n);
