@@ -43,12 +43,18 @@ public class AnyStrategy extends AbstractStrategy{
                             new Pair<>(playerCards.get(0).getValue(),
                                     dealerCards.get(0).getValue()))
                     .getInstruction(realCount);
+            if(decision==Decision.NONE) {
+                throw new RuntimeException("Decision is NONE");
+            }
         }
         else if(softHand(playerHand)) {
             //System.out.println("ace");
             decision = pattern.ace().get(
                             new Pair<>(playerHand.getPoints()-11, dealerCards.get(0).getValue()))
                     .getInstruction(realCount);
+            if(decision==Decision.NONE) {
+                throw new RuntimeException("Decision is NONE");
+            }
             if(decision==Decision.DOUBLE && playerHand.getCards().size()>2) {
                 if(playerHand.getPoints()-11<7) decision = Decision.HIT;
                 else decision = Decision.STAND;
@@ -59,6 +65,9 @@ public class AnyStrategy extends AbstractStrategy{
             decision = pattern.normal().get(
                             new Pair<>(playerHand.getPoints(), dealerCards.get(0).getValue()))
                     .getInstruction(realCount);
+            if(decision==Decision.NONE) {
+                throw new RuntimeException("Decision is NONE");
+            }
         }
 
         // not possible to double/surrender after two initial cards

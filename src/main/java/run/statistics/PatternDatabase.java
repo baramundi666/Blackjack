@@ -3,6 +3,71 @@ package run.statistics;
 public class PatternDatabase {
 
     public static final double[] standardInsurance = {1.4, 2.4, 2.7, 2.9, 3.0, 3.0, 3.1, 3.1, 3.3};
+
+    public static final String[][] testGeneratedPattern = {
+            // 2     3     4     5     6     7     8     9    10     A
+            {"HH0","HH0","HH0","HH0","HH0","HH0","HH0","HH0","HH0","HH0"}, //5
+            // 2     3     4     5     6     7     8     9    10     A
+            {"HH0","HH0","HH0","HH0","HH0","HH0","HH0","HH0","HH0","HH0"}, //6
+            // 2     3     4     5     6     7     8     9    10     A
+            {"HH0","HH0","HH0","HH0","HH0","HH0","HH0","HH0","HH0","HH0"}, //7
+            // 2     3     4     5     6     7     8     9    10     A
+            {"HH0","HH0","HH0","HH0","HH0","HH0","HH0","HH0","HH0","HH0"}, //8
+            // 2     3     4     5     6     7     8     9    10     A
+            {"HH0","DD0","DD0","DD0","DD0","HH0","HH0","HH0","HH0","HH0"}, //9
+            // 2     3     4     5     6     7     8     9    10     A
+            {"DD0","DD0","DD0","DD0","DD0","DD0","DD0","DD0","HH0","HH0"}, //10
+            // 2     3     4     5     6     7     8     9    10     A
+            {"DD0","DD0","DD0","DD0","DD0","DD0","DD0","DD0","HH0","HH0"}, //11
+            // 2     3     4     5     6     7     8     9    10     A
+            {"HH0","HH0","HH0","SS0","SS0","HH0","HH0","HH0","HH0","HH0"}, //12
+            // 2     3     4     5     6     7     8     9    10     A
+            {"SS0","SS0","SS0","SS0","SS0","HH0","HH0","HH0","HH0","HH0"}, //13
+            // 2     3     4     5     6     7     8     9    10     A
+            {"SS0","SS0","SS0","SS0","SS0","HH0","HH0","HH0","UU0","HH0"}, //14
+            // 2     3     4     5     6     7     8     9    10     A
+            {"SS0","SS0","SS0","SS0","SS0","HH0","HH0","HH0","UU0","HH0"}, //15
+            // 2     3     4     5     6     7     8     9    10     A
+            {"SS0","SS0","SS0","SS0","SS0","HH0","HH0","UU0","UU0","HH0"}, //16
+            // 2     3     4     5     6     7     8     9    10     A
+            {"SS0","SS0","SS0","SS0","SS0","SS0","SS0","SS0","SS0","SS0"}, //17
+            // 2     3     4     5     6     7     8     9    10     A
+            {"SS0","SS0","SS0","SS0","SS0","SS0","SS0","SS0","SS0","SS0"}, //18
+            // 2     3     4     5     6     7     8     9    10     A
+            {"SS0","SS0","SS0","SS0","SS0","SS0","SS0","SS0","SS0","SS0"}, //19
+            // 2     3     4     5     6     7     8     9    10     A
+            {"SS0","SS0","SS0","SS0","SS0","SS0","SS0","SS0","SS0","SS0"}, //20
+            // 2     3     4     5     6     7     8     9    10     A
+            {"HH0","HH0","HH0","DD0","DD0","HH0","HH0","HH0","HH0","HH0"}, //A-2
+            {"HH0","HH0","HH0","DD0","DD0","HH0","HH0","HH0","HH0","HH0"}, //A-3
+            {"HH0","HH0","DD0","DD0","DD0","HH0","HH0","HH0","HH0","HH0"}, //A-4
+            {"HH0","HH0","DD0","DD0","DD0","HH0","HH0","HH0","HH0","HH0"}, //A-5
+            {"HH0","DD0","DD0","DD0","DD0","HH0","HH0","HH0","HH0","HH0"}, //A-6
+            {"SS0","DD0","DD0","DD0","DD0","SS0","SS0","HH0","HH0","HH0"}, //A-7
+            {"SS0","SS0","SS0","SS0","SS0","SS0","SS0","SS0","SS0","SS0"}, //A-8
+            {"SS0","SS0","SS0","SS0","SS0","SS0","SS0","SS0","SS0","SS0"}, //A-9
+            // 2     3     4     5     6     7     8     9    10     A
+            {"PP0","PP0","PP0","PP0","PP0","PP0","PP0","PP0","PP0","PP0"}, //A-A
+            // 2     3     4     5     6     7     8     9    10     A
+            {"PP0","PP0","PP0","PP0","PP0","PP0","HH0","HH0","HH0","HH0"}, //2-2
+            // 2     3     4     5     6     7     8     9    10     A
+            {"PP0","PP0","PP0","PP0","PP0","PP0","HH0","HH0","HH0","HH0"}, //3-3
+            // 2     3     4     5     6     7     8     9    10     A
+            {"HH0","HH0","HH0","PP0","PP0","HH0","HH0","HH0","HH0","HH0"}, //4-4
+            // 2     3     4     5     6     7     8     9    10     A
+            {"DD0","DD0","DD0","DD0","DD0","DD0","DD0","DD0","HH0","HH0"}, //5-5
+            // 2     3     4     5     6     7     8     9    10     A
+            {"PP0","PP0","PP0","PP0","PP0","HH0","HH0","HH0","HH0","HH0"}, //6-6
+            // 2     3     4     5     6     7     8     9    10     A
+            {"PP0","PP0","PP0","PP0","PP0","PP0","HH0","HH0","HH0","HH0"}, //7-7
+            // 2     3     4     5     6     7     8     9    10     A
+            {"PP0","PP0","PP0","PP0","PP0","PP0","PP0","PP0","HH0","HH0"}, //8-8
+            // 2     3     4     5     6     7     8     9    10     A
+            {"PP0","PP0","PP0","PP0","PP0","SS0","PP0","PP0","SS0","SS0"}, //9-9
+            // 2     3     4     5     6     7     8     9    10     A
+            {"SS0","SS0","SS0","SS0","SS0","SS0","SS0","SS0","SS0","SS0"}, //10-10
+    };
+
     public static final String[][] newPattern = {
             // 2     3     4     5     6     7     8     9    10     A
             {"HH0","HH0","HH0","HH0","HH0","HH0","HH0","HH0","HH0","HH0"}, //5
@@ -15,9 +80,9 @@ public class PatternDatabase {
             {"HH0","HH0","SS0","SS0","SS0","HH0","HH0","HH0","HH0","HH0"}, //12
             {"SS0","SS0","SS0","SS0","SS0","HH0","HH0","HH0","HH0","HH0"}, //13
             {"SS0","SS0","SS0","SS0","SS0","HH0","HH0","HH0","HH0","HH0"}, //14
-            {"SS0","SS0","SS0","SS0","SS0","HH0","HH0","HH0","UU0","UU0"}, //15
-            {"SS0","SS0","SS0","SS0","SS0","HH0","HH0","UU0","UU0","UU0"}, //16
-            {"SS0","SS0","SS0","SS0","SS0","SS0","SS0","SS0","SS0","UU0"}, //17
+            {"SS0","SS0","SS0","SS0","SS0","HH0","HH0","HH0","UU0","SS0"}, //15
+            {"SS0","SS0","SS0","SS0","SS0","HH0","HH0","UU0","UU0","SS0"}, //16
+            {"SS0","SS0","SS0","SS0","SS0","SS0","SS0","SS0","SS0","SS0"}, //17
             {"SS0","SS0","SS0","SS0","SS0","SS0","SS0","SS0","SS0","SS0"}, //18
             {"SS0","SS0","SS0","SS0","SS0","SS0","SS0","SS0","SS0","SS0"}, //19
             {"SS0","SS0","SS0","SS0","SS0","SS0","SS0","SS0","SS0","SS0"}, //20

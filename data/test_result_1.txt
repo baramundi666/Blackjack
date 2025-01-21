@@ -1,0 +1,2446 @@
+Test result for:
+player cards: 10, K
+dealer card: 2
+SURRENDER: -50.0%
+STAND: 63.77838%
+DOUBLE: -170.98454%
+HIT: -85.4884%
+Test result for:
+player cards: 10, K
+dealer card: 3
+SURRENDER: -50.0%
+STAND: 64.88201%
+DOUBLE: -170.84362%
+HIT: -85.4038%
+Test result for:
+player cards: 10, K
+dealer card: 4
+SURRENDER: -50.0%
+STAND: 65.88275%
+DOUBLE: -170.85598%
+HIT: -85.43826%
+Test result for:
+player cards: 10, K
+dealer card: 5
+SURRENDER: -50.0%
+STAND: 66.88437%
+DOUBLE: -170.72862%
+HIT: -85.38519%
+Test result for:
+player cards: 10, K
+dealer card: 6
+SURRENDER: -50.0%
+STAND: 70.1452%
+DOUBLE: -170.91008%
+HIT: -85.44654%
+Test result for:
+player cards: 10, K
+dealer card: 7
+SURRENDER: -50.0%
+STAND: 77.29237%
+DOUBLE: -170.45774%
+HIT: -85.22593%
+Test result for:
+player cards: 10, K
+dealer card: 8
+SURRENDER: -50.0%
+STAND: 78.92351%
+DOUBLE: -170.4293%
+HIT: -85.19072%
+Test result for:
+player cards: 10, K
+dealer card: 9
+SURRENDER: -50.0%
+STAND: 75.7764%
+DOUBLE: -170.23298%
+HIT: -85.1194%
+Test result for:
+player cards: 10, K
+dealer card: 10
+SURRENDER: -50.0%
+STAND: 43.63106%
+DOUBLE: -171.61962%
+HIT: -85.84193%
+Test result for:
+player cards: 10, K
+dealer card: A
+STAND: 14.98431%
+DOUBLE: -179.35912%
+HIT: -89.69531%
+Test result for:
+player cards: 10, 9
+dealer card: 2
+SURRENDER: -50.0%
+STAND: 38.40703%
+DOUBLE: -145.4887%
+HIT: -72.7681%
+Test result for:
+player cards: 10, 9
+dealer card: 3
+SURRENDER: -50.0%
+STAND: 40.26204%
+DOUBLE: -145.23592%
+HIT: -72.63033%
+Test result for:
+player cards: 10, 9
+dealer card: 4
+SURRENDER: -50.0%
+STAND: 41.95591%
+DOUBLE: -145.03366%
+HIT: -72.53832%
+Test result for:
+player cards: 10, 9
+dealer card: 5
+SURRENDER: -50.0%
+STAND: 43.65903%
+DOUBLE: -144.90356%
+HIT: -72.46382%
+Test result for:
+player cards: 10, 9
+dealer card: 6
+SURRENDER: -50.0%
+STAND: 49.2301%
+DOUBLE: -144.63704%
+HIT: -72.28322%
+Test result for:
+player cards: 10, 9
+dealer card: 7
+SURRENDER: -50.0%
+STAND: 61.36945%
+DOUBLE: -143.00112%
+HIT: -71.50195%
+Test result for:
+player cards: 10, 9
+dealer card: 8
+SURRENDER: -50.0%
+STAND: 59.03513%
+DOUBLE: -142.68862%
+HIT: -71.32782%
+Test result for:
+player cards: 10, 9
+dealer card: 9
+SURRENDER: -50.0%
+STAND: 28.91882%
+DOUBLE: -142.62816%
+HIT: -71.31276%
+Test result for:
+player cards: 10, 9
+dealer card: 10
+SURRENDER: -50.0%
+STAND: -1.46072%
+DOUBLE: -149.44854%
+HIT: -74.71116%
+Test result for:
+player cards: 10, 9
+dealer card: A
+STAND: -11.18063%
+DOUBLE: -161.65806%
+HIT: -80.85927%
+Test result for:
+player cards: 10, 8
+dealer card: 2
+SURRENDER: -50.0%
+STAND: 11.93039%
+DOUBLE: -123.9645%
+HIT: -62.00121%
+Test result for:
+player cards: 10, 8
+dealer card: 3
+SURRENDER: -50.0%
+STAND: 14.60284%
+DOUBLE: -123.53454%
+HIT: -61.74968%
+Test result for:
+player cards: 10, 8
+dealer card: 4
+SURRENDER: -50.0%
+STAND: 17.2485%
+DOUBLE: -123.17096%
+HIT: -61.58561%
+Test result for:
+player cards: 10, 8
+dealer card: 5
+SURRENDER: -50.0%
+STAND: 19.49725%
+DOUBLE: -122.73442%
+HIT: -61.39943%
+Test result for:
+player cards: 10, 8
+dealer card: 6
+SURRENDER: -50.0%
+STAND: 27.85733%
+DOUBLE: -121.56578%
+HIT: -60.82942%
+Test result for:
+player cards: 10, 8
+dealer card: 7
+SURRENDER: -50.0%
+STAND: 39.6635%
+DOUBLE: -117.98184%
+HIT: -58.99712%
+Test result for:
+player cards: 10, 8
+dealer card: 8
+SURRENDER: -50.0%
+STAND: 10.49646%
+DOUBLE: -117.52492%
+HIT: -58.79473%
+Test result for:
+player cards: 10, 8
+dealer card: 9
+SURRENDER: -50.0%
+STAND: -17.85193%
+DOUBLE: -122.32184%
+HIT: -61.17483%
+Test result for:
+player cards: 10, 8
+dealer card: 10
+SURRENDER: -50.0%
+STAND: -23.6431%
+DOUBLE: -134.33762%
+HIT: -67.19792%
+Test result for:
+player cards: 10, 8
+dealer card: A
+STAND: -37.27024%
+DOUBLE: -148.13926%
+HIT: -74.06356%
+Test result for:
+player cards: 10, 7
+dealer card: 2
+SURRENDER: -50.0%
+STAND: -15.6007%
+DOUBLE: -106.84162%
+HIT: -53.38941%
+Test result for:
+player cards: 10, 7
+dealer card: 3
+SURRENDER: -50.0%
+STAND: -11.97162%
+DOUBLE: -106.01166%
+HIT: -52.9526%
+Test result for:
+player cards: 10, 7
+dealer card: 4
+SURRENDER: -50.0%
+STAND: -8.47404%
+DOUBLE: -105.30566%
+HIT: -52.64011%
+Test result for:
+player cards: 10, 7
+dealer card: 5
+SURRENDER: -50.0%
+STAND: -4.84832%
+DOUBLE: -104.53716%
+HIT: -52.25426%
+Test result for:
+player cards: 10, 7
+dealer card: 6
+SURRENDER: -50.0%
+STAND: 0.69569%
+DOUBLE: -102.07106%
+HIT: -51.00977%
+Test result for:
+player cards: 10, 7
+dealer card: 7
+SURRENDER: -50.0%
+STAND: -10.64122%
+DOUBLE: -95.95954%
+HIT: -47.99194%
+Test result for:
+player cards: 10, 7
+dealer card: 8
+SURRENDER: -50.0%
+STAND: -37.87064%
+DOUBLE: -100.20932%
+HIT: -50.07424%
+Test result for:
+player cards: 10, 7
+dealer card: 9
+SURRENDER: -50.0%
+STAND: -41.77818%
+DOUBLE: -109.8504%
+HIT: -54.94189%
+Test result for:
+player cards: 10, 7
+dealer card: 10
+SURRENDER: -50.0%
+STAND: -45.83804%
+DOUBLE: -122.81464%
+HIT: -61.40042%
+Test result for:
+player cards: 10, 7
+dealer card: A
+STAND: -63.38627%
+DOUBLE: -138.7486%
+HIT: -69.32543%
+Test result for:
+player cards: 10, 6
+dealer card: 2
+SURRENDER: -50.0%
+STAND: -29.72572%
+DOUBLE: -93.90782%
+HIT: -46.96613%
+Test result for:
+player cards: 10, 6
+dealer card: 3
+SURRENDER: -50.0%
+STAND: -25.3265%
+DOUBLE: -92.5638%
+HIT: -46.24828%
+Test result for:
+player cards: 10, 6
+dealer card: 4
+SURRENDER: -50.0%
+STAND: -21.64926%
+DOUBLE: -91.32634%
+HIT: -45.60467%
+Test result for:
+player cards: 10, 6
+dealer card: 5
+SURRENDER: -50.0%
+STAND: -16.89446%
+DOUBLE: -89.8328%
+HIT: -44.95011%
+Test result for:
+player cards: 10, 6
+dealer card: 6
+SURRENDER: -50.0%
+STAND: -15.8926%
+DOUBLE: -85.63608%
+HIT: -42.86334%
+Test result for:
+player cards: 10, 6
+dealer card: 7
+SURRENDER: -50.0%
+STAND: -47.09416%
+DOUBLE: -81.59276%
+HIT: -40.81711%
+Test result for:
+player cards: 10, 6
+dealer card: 8
+SURRENDER: -50.0%
+STAND: -50.80848%
+DOUBLE: -90.76392%
+HIT: -45.35108%
+Test result for:
+player cards: 10, 6
+dealer card: 9
+SURRENDER: -50.0%
+STAND: -53.65262%
+DOUBLE: -101.0693%
+HIT: -50.56862%
+Test result for:
+player cards: 10, 6
+dealer card: 10
+SURRENDER: -50.0%
+STAND: -56.98774%
+DOUBLE: -114.68116%
+HIT: -57.3715%
+Test result for:
+player cards: 10, 6
+dealer card: A
+STAND: -76.35152%
+DOUBLE: -133.13446%
+HIT: -66.55713%
+Test result for:
+player cards: 10, 5
+dealer card: 2
+SURRENDER: -50.0%
+STAND: -29.74528%
+DOUBLE: -83.11704%
+HIT: -41.58116%
+Test result for:
+player cards: 10, 5
+dealer card: 3
+SURRENDER: -50.0%
+STAND: -25.36964%
+DOUBLE: -81.0008%
+HIT: -40.52353%
+Test result for:
+player cards: 10, 5
+dealer card: 4
+SURRENDER: -50.0%
+STAND: -21.64244%
+DOUBLE: -79.17694%
+HIT: -39.57006%
+Test result for:
+player cards: 10, 5
+dealer card: 5
+SURRENDER: -50.0%
+STAND: -16.92656%
+DOUBLE: -76.25246%
+HIT: -38.11761%
+Test result for:
+player cards: 10, 5
+dealer card: 6
+SURRENDER: -50.0%
+STAND: -15.89358%
+DOUBLE: -71.67026%
+HIT: -35.87882%
+Test result for:
+player cards: 10, 5
+dealer card: 7
+SURRENDER: -50.0%
+STAND: -47.12354%
+DOUBLE: -73.47132%
+HIT: -36.39683%
+Test result for:
+player cards: 10, 5
+dealer card: 8
+SURRENDER: -50.0%
+STAND: -50.77068%
+DOUBLE: -83.12158%
+HIT: -41.24078%
+Test result for:
+player cards: 10, 5
+dealer card: 9
+SURRENDER: -50.0%
+STAND: -53.65094%
+DOUBLE: -93.982%
+HIT: -46.79475%
+Test result for:
+player cards: 10, 5
+dealer card: 10
+SURRENDER: -50.0%
+STAND: -56.96366%
+DOUBLE: -108.16544%
+HIT: -54.16167%
+Test result for:
+player cards: 10, 5
+dealer card: A
+STAND: -76.30062%
+DOUBLE: -129.67862%
+HIT: -64.05249%
+Test result for:
+player cards: 10, 4
+dealer card: 2
+SURRENDER: -50.0%
+STAND: -29.7632%
+DOUBLE: -72.4148%
+HIT: -36.18918%
+Test result for:
+player cards: 10, 4
+dealer card: 3
+SURRENDER: -50.0%
+STAND: -25.29688%
+DOUBLE: -69.62024%
+HIT: -34.83516%
+Test result for:
+player cards: 10, 4
+dealer card: 4
+SURRENDER: -50.0%
+STAND: -21.63928%
+DOUBLE: -66.17024%
+HIT: -33.08633%
+Test result for:
+player cards: 10, 4
+dealer card: 5
+SURRENDER: -50.0%
+STAND: -16.8626%
+DOUBLE: -62.69376%
+HIT: -31.36261%
+Test result for:
+player cards: 10, 4
+dealer card: 6
+SURRENDER: -50.0%
+STAND: -15.91248%
+DOUBLE: -58.673%
+HIT: -29.35671%
+Test result for:
+player cards: 10, 4
+dealer card: 7
+SURRENDER: -50.0%
+STAND: -47.1007%
+DOUBLE: -65.34044%
+HIT: -31.61298%
+Test result for:
+player cards: 10, 4
+dealer card: 8
+SURRENDER: -50.0%
+STAND: -50.80972%
+DOUBLE: -75.69726%
+HIT: -36.9128%
+Test result for:
+player cards: 10, 4
+dealer card: 9
+SURRENDER: -50.0%
+STAND: -53.64758%
+DOUBLE: -86.95682%
+HIT: -42.83318%
+Test result for:
+player cards: 10, 4
+dealer card: 10
+SURRENDER: -50.0%
+STAND: -57.0055%
+DOUBLE: -101.80736%
+HIT: -50.76241%
+Test result for:
+player cards: 10, 4
+dealer card: A
+STAND: -76.33436%
+DOUBLE: -126.2472%
+HIT: -61.42753%
+Test result for:
+player cards: 10, 3
+dealer card: 2
+SURRENDER: -50.0%
+STAND: -29.74742%
+DOUBLE: -61.67034%
+HIT: -30.84326%
+Test result for:
+player cards: 10, 3
+dealer card: 3
+SURRENDER: -50.0%
+STAND: -25.42262%
+DOUBLE: -57.28972%
+HIT: -28.64677%
+Test result for:
+player cards: 10, 3
+dealer card: 4
+SURRENDER: -50.0%
+STAND: -21.63522%
+DOUBLE: -53.39886%
+HIT: -26.74815%
+Test result for:
+player cards: 10, 3
+dealer card: 5
+SURRENDER: -50.0%
+STAND: -16.9037%
+DOUBLE: -49.84954%
+HIT: -24.94449%
+Test result for:
+player cards: 10, 3
+dealer card: 6
+SURRENDER: -50.0%
+STAND: -15.87006%
+DOUBLE: -45.80288%
+HIT: -22.90117%
+Test result for:
+player cards: 10, 3
+dealer card: 7
+SURRENDER: -50.0%
+STAND: -47.1198%
+DOUBLE: -57.38472%
+HIT: -26.54879%
+Test result for:
+player cards: 10, 3
+dealer card: 8
+SURRENDER: -50.0%
+STAND: -50.76078%
+DOUBLE: -68.2274%
+HIT: -32.17654%
+Test result for:
+player cards: 10, 3
+dealer card: 9
+SURRENDER: -50.0%
+STAND: -53.65606%
+DOUBLE: -80.23754%
+HIT: -38.66145%
+Test result for:
+player cards: 10, 3
+dealer card: 10
+SURRENDER: -50.0%
+STAND: -57.02372%
+DOUBLE: -95.59538%
+HIT: -47.15701%
+Test result for:
+player cards: 10, 3
+dealer card: A
+STAND: -76.32186%
+DOUBLE: -122.78954%
+HIT: -58.6496%
+Test result for:
+player cards: A, 9
+dealer card: 2
+SURRENDER: -50.0%
+STAND: 63.7805%
+DOUBLE: -170.92834%
+HIT: -85.47052%
+Test result for:
+player cards: A, 9
+dealer card: 3
+SURRENDER: -50.0%
+STAND: 64.89914%
+DOUBLE: -170.89704%
+HIT: -85.41949%
+Test result for:
+player cards: A, 9
+dealer card: 4
+SURRENDER: -50.0%
+STAND: 65.85862%
+DOUBLE: -170.7853%
+HIT: -85.41034%
+Test result for:
+player cards: A, 9
+dealer card: 5
+SURRENDER: -50.0%
+STAND: 66.88667%
+DOUBLE: -170.74946%
+HIT: -85.37377%
+Test result for:
+player cards: A, 9
+dealer card: 6
+SURRENDER: -50.0%
+STAND: 70.16508%
+DOUBLE: -170.88852%
+HIT: -85.46706%
+Test result for:
+player cards: A, 9
+dealer card: 7
+SURRENDER: -50.0%
+STAND: 77.26207%
+DOUBLE: -170.45504%
+HIT: -85.2245%
+Test result for:
+player cards: A, 9
+dealer card: 8
+SURRENDER: -50.0%
+STAND: 78.91649%
+DOUBLE: -170.44526%
+HIT: -85.18979%
+Test result for:
+player cards: A, 9
+dealer card: 9
+SURRENDER: -50.0%
+STAND: 75.76459%
+DOUBLE: -170.27388%
+HIT: -85.10461%
+Test result for:
+player cards: A, 9
+dealer card: 10
+SURRENDER: -50.0%
+STAND: 43.6313%
+DOUBLE: -171.61564%
+HIT: -85.81129%
+Test result for:
+player cards: A, 9
+dealer card: A
+STAND: 14.98802%
+DOUBLE: -179.39116%
+HIT: -89.68526%
+Test result for:
+player cards: A, 8
+dealer card: 2
+SURRENDER: -50.0%
+STAND: 38.35724%
+DOUBLE: -145.47928%
+HIT: -72.74448%
+Test result for:
+player cards: A, 8
+dealer card: 3
+SURRENDER: -50.0%
+STAND: 40.23714%
+DOUBLE: -145.21766%
+HIT: -72.61988%
+Test result for:
+player cards: A, 8
+dealer card: 4
+SURRENDER: -50.0%
+STAND: 42.02686%
+DOUBLE: -145.05336%
+HIT: -72.53531%
+Test result for:
+player cards: A, 8
+dealer card: 5
+SURRENDER: -50.0%
+STAND: 43.63165%
+DOUBLE: -144.99032%
+HIT: -72.45174%
+Test result for:
+player cards: A, 8
+dealer card: 6
+SURRENDER: -50.0%
+STAND: 49.26277%
+DOUBLE: -144.58668%
+HIT: -72.31778%
+Test result for:
+player cards: A, 8
+dealer card: 7
+SURRENDER: -50.0%
+STAND: 61.38978%
+DOUBLE: -143.01198%
+HIT: -71.47032%
+Test result for:
+player cards: A, 8
+dealer card: 8
+SURRENDER: -50.0%
+STAND: 59.09233%
+DOUBLE: -142.63694%
+HIT: -71.31588%
+Test result for:
+player cards: A, 8
+dealer card: 9
+SURRENDER: -50.0%
+STAND: 28.91975%
+DOUBLE: -142.60158%
+HIT: -71.2749%
+Test result for:
+player cards: A, 8
+dealer card: 10
+SURRENDER: -50.0%
+STAND: -1.49327%
+DOUBLE: -149.43662%
+HIT: -74.72603%
+Test result for:
+player cards: A, 8
+dealer card: A
+STAND: -11.12713%
+DOUBLE: -161.6809%
+HIT: -80.81839%
+Test result for:
+player cards: A, 7
+dealer card: 2
+SURRENDER: -50.0%
+STAND: 11.96451%
+DOUBLE: -124.07958%
+HIT: -62.00699%
+Test result for:
+player cards: A, 7
+dealer card: 3
+SURRENDER: -50.0%
+STAND: 14.59537%
+DOUBLE: -123.5272%
+HIT: -61.7689%
+Test result for:
+player cards: A, 7
+dealer card: 4
+SURRENDER: -50.0%
+STAND: 17.22551%
+DOUBLE: -123.22336%
+HIT: -61.59456%
+Test result for:
+player cards: A, 7
+dealer card: 5
+SURRENDER: -50.0%
+STAND: 19.53414%
+DOUBLE: -122.91408%
+HIT: -61.38438%
+Test result for:
+player cards: A, 7
+dealer card: 6
+SURRENDER: -50.0%
+STAND: 27.76387%
+DOUBLE: -121.55254%
+HIT: -60.81237%
+Test result for:
+player cards: A, 7
+dealer card: 7
+SURRENDER: -50.0%
+STAND: 39.67563%
+DOUBLE: -117.95452%
+HIT: -58.95996%
+Test result for:
+player cards: A, 7
+dealer card: 8
+SURRENDER: -50.0%
+STAND: 10.55957%
+DOUBLE: -117.5556%
+HIT: -58.80291%
+Test result for:
+player cards: A, 7
+dealer card: 9
+SURRENDER: -50.0%
+STAND: -17.87074%
+DOUBLE: -122.38546%
+HIT: -61.215%
+Test result for:
+player cards: A, 7
+dealer card: 10
+SURRENDER: -50.0%
+STAND: -23.65795%
+DOUBLE: -134.47786%
+HIT: -67.23657%
+Test result for:
+player cards: A, 7
+dealer card: A
+STAND: -37.31453%
+DOUBLE: -148.14796%
+HIT: -74.04944%
+Test result for:
+player cards: A, 6
+dealer card: 2
+SURRENDER: -50.0%
+STAND: -15.65997%
+DOUBLE: -106.79774%
+HIT: -53.39929%
+Test result for:
+player cards: A, 6
+dealer card: 3
+SURRENDER: -50.0%
+STAND: -11.9913%
+DOUBLE: -106.01042%
+HIT: -52.96198%
+Test result for:
+player cards: A, 6
+dealer card: 4
+SURRENDER: -50.0%
+STAND: -8.40022%
+DOUBLE: -105.25574%
+HIT: -52.6113%
+Test result for:
+player cards: A, 6
+dealer card: 5
+SURRENDER: -50.0%
+STAND: -4.86374%
+DOUBLE: -104.56938%
+HIT: -52.24278%
+Test result for:
+player cards: A, 6
+dealer card: 6
+SURRENDER: -50.0%
+STAND: 0.6802%
+DOUBLE: -102.0329%
+HIT: -51.03329%
+Test result for:
+player cards: A, 6
+dealer card: 7
+SURRENDER: -50.0%
+STAND: -10.60874%
+DOUBLE: -95.92806%
+HIT: -47.97846%
+Test result for:
+player cards: A, 6
+dealer card: 8
+SURRENDER: -50.0%
+STAND: -37.92964%
+DOUBLE: -100.2482%
+HIT: -50.06234%
+Test result for:
+player cards: A, 6
+dealer card: 9
+SURRENDER: -50.0%
+STAND: -41.75506%
+DOUBLE: -109.92202%
+HIT: -54.9587%
+Test result for:
+player cards: A, 6
+dealer card: 10
+SURRENDER: -50.0%
+STAND: -45.88013%
+DOUBLE: -122.86908%
+HIT: -61.44657%
+Test result for:
+player cards: A, 6
+dealer card: A
+STAND: -63.3493%
+DOUBLE: -138.65402%
+HIT: -69.32724%
+Test result for:
+player cards: A, 5
+dealer card: 2
+SURRENDER: -50.0%
+STAND: -29.69302%
+DOUBLE: -93.89026%
+HIT: -46.94028%
+Test result for:
+player cards: A, 5
+dealer card: 3
+SURRENDER: -50.0%
+STAND: -25.34782%
+DOUBLE: -92.51318%
+HIT: -46.27011%
+Test result for:
+player cards: A, 5
+dealer card: 4
+SURRENDER: -50.0%
+STAND: -21.67412%
+DOUBLE: -91.33364%
+HIT: -45.64491%
+Test result for:
+player cards: A, 5
+dealer card: 5
+SURRENDER: -50.0%
+STAND: -16.9182%
+DOUBLE: -89.9671%
+HIT: -44.9622%
+Test result for:
+player cards: A, 5
+dealer card: 6
+SURRENDER: -50.0%
+STAND: -15.87756%
+DOUBLE: -85.62856%
+HIT: -42.88273%
+Test result for:
+player cards: A, 5
+dealer card: 7
+SURRENDER: -50.0%
+STAND: -47.09454%
+DOUBLE: -81.58854%
+HIT: -40.78266%
+Test result for:
+player cards: A, 5
+dealer card: 8
+SURRENDER: -50.0%
+STAND: -50.80614%
+DOUBLE: -90.68764%
+HIT: -45.33145%
+Test result for:
+player cards: A, 5
+dealer card: 9
+SURRENDER: -50.0%
+STAND: -53.66874%
+DOUBLE: -101.07692%
+HIT: -50.47085%
+Test result for:
+player cards: A, 5
+dealer card: 10
+SURRENDER: -50.0%
+STAND: -56.98404%
+DOUBLE: -114.67482%
+HIT: -57.31228%
+Test result for:
+player cards: A, 5
+dealer card: A
+STAND: -76.32534%
+DOUBLE: -133.10332%
+HIT: -66.55421%
+Test result for:
+player cards: A, 4
+dealer card: 2
+SURRENDER: -50.0%
+STAND: -29.7528%
+DOUBLE: -83.16232%
+HIT: -41.58687%
+Test result for:
+player cards: A, 4
+dealer card: 3
+SURRENDER: -50.0%
+STAND: -25.37342%
+DOUBLE: -81.05152%
+HIT: -40.53984%
+Test result for:
+player cards: A, 4
+dealer card: 4
+SURRENDER: -50.0%
+STAND: -21.61262%
+DOUBLE: -79.16668%
+HIT: -39.56006%
+Test result for:
+player cards: A, 4
+dealer card: 5
+SURRENDER: -50.0%
+STAND: -16.9227%
+DOUBLE: -76.182%
+HIT: -38.14028%
+Test result for:
+player cards: A, 4
+dealer card: 6
+SURRENDER: -50.0%
+STAND: -15.90142%
+DOUBLE: -71.6776%
+HIT: -35.86197%
+Test result for:
+player cards: A, 4
+dealer card: 7
+SURRENDER: -50.0%
+STAND: -47.12472%
+DOUBLE: -73.48402%
+HIT: -36.41393%
+Test result for:
+player cards: A, 4
+dealer card: 8
+SURRENDER: -50.0%
+STAND: -50.79642%
+DOUBLE: -83.16454%
+HIT: -41.22355%
+Test result for:
+player cards: A, 4
+dealer card: 9
+SURRENDER: -50.0%
+STAND: -53.61066%
+DOUBLE: -94.02482%
+HIT: -46.81858%
+Test result for:
+player cards: A, 4
+dealer card: 10
+SURRENDER: -50.0%
+STAND: -56.99764%
+DOUBLE: -108.03148%
+HIT: -54.11863%
+Test result for:
+player cards: A, 4
+dealer card: A
+STAND: -76.34196%
+DOUBLE: -129.62088%
+HIT: -64.05877%
+Test result for:
+player cards: A, 3
+dealer card: 2
+SURRENDER: -50.0%
+STAND: -29.7388%
+DOUBLE: -72.38734%
+HIT: -36.22385%
+Test result for:
+player cards: A, 3
+dealer card: 3
+SURRENDER: -50.0%
+STAND: -25.36222%
+DOUBLE: -69.57646%
+HIT: -34.77798%
+Test result for:
+player cards: A, 3
+dealer card: 4
+SURRENDER: -50.0%
+STAND: -21.64432%
+DOUBLE: -66.32162%
+HIT: -33.13524%
+Test result for:
+player cards: A, 3
+dealer card: 5
+SURRENDER: -50.0%
+STAND: -16.88024%
+DOUBLE: -62.61016%
+HIT: -31.29453%
+Test result for:
+player cards: A, 3
+dealer card: 6
+SURRENDER: -50.0%
+STAND: -15.88676%
+DOUBLE: -58.66246%
+HIT: -29.37877%
+Test result for:
+player cards: A, 3
+dealer card: 7
+SURRENDER: -50.0%
+STAND: -47.12728%
+DOUBLE: -65.23468%
+HIT: -31.63774%
+Test result for:
+player cards: A, 3
+dealer card: 8
+SURRENDER: -50.0%
+STAND: -50.80992%
+DOUBLE: -75.71044%
+HIT: -36.86991%
+Test result for:
+player cards: A, 3
+dealer card: 9
+SURRENDER: -50.0%
+STAND: -53.6504%
+DOUBLE: -86.9377%
+HIT: -42.80063%
+Test result for:
+player cards: A, 3
+dealer card: 10
+SURRENDER: -50.0%
+STAND: -57.04284%
+DOUBLE: -101.83842%
+HIT: -50.74297%
+Test result for:
+player cards: A, 3
+dealer card: A
+STAND: -76.31398%
+DOUBLE: -126.22988%
+HIT: -61.43506%
+Test result for:
+player cards: A, 2
+dealer card: 2
+SURRENDER: -50.0%
+STAND: -29.72574%
+DOUBLE: -61.69916%
+HIT: -30.82501%
+Test result for:
+player cards: A, 2
+dealer card: 3
+SURRENDER: -50.0%
+STAND: -25.36448%
+DOUBLE: -57.33926%
+HIT: -28.59013%
+Test result for:
+player cards: A, 2
+dealer card: 4
+SURRENDER: -50.0%
+STAND: -21.64842%
+DOUBLE: -53.39836%
+HIT: -26.69977%
+Test result for:
+player cards: A, 2
+dealer card: 5
+SURRENDER: -50.0%
+STAND: -16.88742%
+DOUBLE: -49.79364%
+HIT: -24.9547%
+Test result for:
+player cards: A, 2
+dealer card: 6
+SURRENDER: -50.0%
+STAND: -15.90734%
+DOUBLE: -45.80312%
+HIT: -22.92724%
+Test result for:
+player cards: A, 2
+dealer card: 7
+SURRENDER: -50.0%
+STAND: -47.11774%
+DOUBLE: -57.32566%
+HIT: -26.55251%
+Test result for:
+player cards: A, 2
+dealer card: 8
+SURRENDER: -50.0%
+STAND: -50.80868%
+DOUBLE: -68.23318%
+HIT: -32.22639%
+Test result for:
+player cards: A, 2
+dealer card: 9
+SURRENDER: -50.0%
+STAND: -53.68066%
+DOUBLE: -80.24528%
+HIT: -38.65793%
+Test result for:
+player cards: A, 2
+dealer card: 10
+SURRENDER: -50.0%
+STAND: -56.98526%
+DOUBLE: -95.49424%
+HIT: -47.1469%
+Test result for:
+player cards: A, 2
+dealer card: A
+STAND: -76.33406%
+DOUBLE: -122.8799%
+HIT: -58.65545%
+Test result for:
+player cards: 10, 2
+dealer card: 2
+SURRENDER: -50.0%
+STAND: -29.74324%
+DOUBLE: -50.13778%
+HIT: -25.10801%
+Test result for:
+player cards: 10, 2
+dealer card: 3
+SURRENDER: -50.0%
+STAND: -25.32262%
+DOUBLE: -45.2146%
+HIT: -22.62724%
+Test result for:
+player cards: 10, 2
+dealer card: 4
+SURRENDER: -50.0%
+STAND: -21.68934%
+DOUBLE: -41.45448%
+HIT: -20.77673%
+Test result for:
+player cards: 10, 2
+dealer card: 5
+SURRENDER: -50.0%
+STAND: -16.87814%
+DOUBLE: -37.2002%
+HIT: -18.63705%
+Test result for:
+player cards: 10, 2
+dealer card: 6
+SURRENDER: -50.0%
+STAND: -15.91308%
+DOUBLE: -33.04066%
+HIT: -16.53376%
+Test result for:
+player cards: 10, 2
+dealer card: 7
+SURRENDER: -50.0%
+STAND: -47.08824%
+DOUBLE: -49.34302%
+HIT: -21.07031%
+Test result for:
+player cards: 10, 2
+dealer card: 8
+SURRENDER: -50.0%
+STAND: -50.8046%
+DOUBLE: -61.02442%
+HIT: -27.28543%
+Test result for:
+player cards: 10, 2
+dealer card: 9
+SURRENDER: -50.0%
+STAND: -53.6804%
+DOUBLE: -73.39336%
+HIT: -34.21812%
+Test result for:
+player cards: 10, 2
+dealer card: 10
+SURRENDER: -50.0%
+STAND: -57.02918%
+DOUBLE: -89.21892%
+HIT: -43.30146%
+Test result for:
+player cards: 10, 2
+dealer card: A
+STAND: -76.35674%
+DOUBLE: -119.52732%
+HIT: -55.66587%
+Test result for:
+player cards: 9, 2
+dealer card: 2
+SURRENDER: -50.0%
+STAND: -29.70506%
+DOUBLE: 47.45902%
+HIT: 24.03151%
+Test result for:
+player cards: 9, 2
+dealer card: 3
+SURRENDER: -50.0%
+STAND: -25.38064%
+DOUBLE: 52.55482%
+HIT: 26.46295%
+Test result for:
+player cards: 9, 2
+dealer card: 4
+SURRENDER: -50.0%
+STAND: -21.6102%
+DOUBLE: 57.10382%
+HIT: 28.49763%
+Test result for:
+player cards: 9, 2
+dealer card: 5
+SURRENDER: -50.0%
+STAND: -16.88904%
+DOUBLE: 62.29252%
+HIT: 31.17372%
+Test result for:
+player cards: 9, 2
+dealer card: 6
+SURRENDER: -50.0%
+STAND: -15.86924%
+DOUBLE: 67.2816%
+HIT: 33.62288%
+Test result for:
+player cards: 9, 2
+dealer card: 7
+SURRENDER: -50.0%
+STAND: -47.09424%
+DOUBLE: 46.50018%
+HIT: 28.63782%
+Test result for:
+player cards: 9, 2
+dealer card: 8
+SURRENDER: -50.0%
+STAND: -50.80028%
+DOUBLE: 34.6166%
+HIT: 22.22207%
+Test result for:
+player cards: 9, 2
+dealer card: 9
+SURRENDER: -50.0%
+STAND: -53.69298%
+DOUBLE: 22.3906%
+HIT: 15.008%
+Test result for:
+player cards: 9, 2
+dealer card: 10
+SURRENDER: -50.0%
+STAND: -56.97838%
+DOUBLE: 0.04478%
+HIT: 2.16265%
+Test result for:
+player cards: 9, 2
+dealer card: A
+STAND: -76.3114%
+DOUBLE: -52.16652%
+HIT: -20.55796%
+Test result for:
+player cards: 8, 2
+dealer card: 2
+SURRENDER: -50.0%
+STAND: -29.77042%
+DOUBLE: 36.08618%
+HIT: 18.38839%
+Test result for:
+player cards: 8, 2
+dealer card: 3
+SURRENDER: -50.0%
+STAND: -25.36756%
+DOUBLE: 41.42386%
+HIT: 20.94684%
+Test result for:
+player cards: 8, 2
+dealer card: 4
+SURRENDER: -50.0%
+STAND: -21.64134%
+DOUBLE: 46.1668%
+HIT: 23.17325%
+Test result for:
+player cards: 8, 2
+dealer card: 5
+SURRENDER: -50.0%
+STAND: -16.90726%
+DOUBLE: 51.73946%
+HIT: 25.91041%
+Test result for:
+player cards: 8, 2
+dealer card: 6
+SURRENDER: -50.0%
+STAND: -15.84218%
+DOUBLE: 57.45176%
+HIT: 28.70455%
+Test result for:
+player cards: 8, 2
+dealer card: 7
+SURRENDER: -50.0%
+STAND: -47.11374%
+DOUBLE: 38.80388%
+HIT: 25.14668%
+Test result for:
+player cards: 8, 2
+dealer card: 8
+SURRENDER: -50.0%
+STAND: -50.81734%
+DOUBLE: 27.48856%
+HIT: 19.01247%
+Test result for:
+player cards: 8, 2
+dealer card: 9
+SURRENDER: -50.0%
+STAND: -53.6866%
+DOUBLE: 13.27902%
+HIT: 10.79657%
+Test result for:
+player cards: 8, 2
+dealer card: 10
+SURRENDER: -50.0%
+STAND: -57.00134%
+DOUBLE: -15.66528%
+HIT: -5.27763%
+Test result for:
+player cards: 8, 2
+dealer card: A
+STAND: -76.38082%
+DOUBLE: -59.99564%
+HIT: -24.49101%
+Test result for:
+player cards: 7, 2
+dealer card: 2
+SURRENDER: -50.0%
+STAND: -29.72748%
+DOUBLE: 6.011%
+HIT: 7.59889%
+Test result for:
+player cards: 7, 2
+dealer card: 3
+SURRENDER: -50.0%
+STAND: -25.35514%
+DOUBLE: 12.32086%
+HIT: 10.49672%
+Test result for:
+player cards: 7, 2
+dealer card: 4
+SURRENDER: -50.0%
+STAND: -21.68502%
+DOUBLE: 17.90292%
+HIT: 12.93082%
+Test result for:
+player cards: 7, 2
+dealer card: 5
+SURRENDER: -50.0%
+STAND: -16.91632%
+DOUBLE: 24.49844%
+HIT: 15.93991%
+Test result for:
+player cards: 7, 2
+dealer card: 6
+SURRENDER: -50.0%
+STAND: -15.93718%
+DOUBLE: 31.1075%
+HIT: 19.35783%
+Test result for:
+player cards: 7, 2
+dealer card: 7
+SURRENDER: -50.0%
+STAND: -47.1207%
+DOUBLE: 9.5598%
+HIT: 16.56556%
+Test result for:
+player cards: 7, 2
+dealer card: 8
+SURRENDER: -50.0%
+STAND: -50.76872%
+DOUBLE: -4.31196%
+HIT: 8.88759%
+Test result for:
+player cards: 7, 2
+dealer card: 9
+SURRENDER: -50.0%
+STAND: -53.61478%
+DOUBLE: -29.9253%
+HIT: -5.34421%
+Test result for:
+player cards: 7, 2
+dealer card: 10
+SURRENDER: -50.0%
+STAND: -56.98498%
+DOUBLE: -56.57074%
+HIT: -21.21071%
+Test result for:
+player cards: 7, 2
+dealer card: A
+STAND: -76.33156%
+DOUBLE: -89.58266%
+HIT: -35.05076%
+Test result for:
+player cards: 6, 2
+dealer card: 2
+SURRENDER: -50.0%
+STAND: -29.75296%
+DOUBLE: -20.73458%
+HIT: -2.08278%
+Test result for:
+player cards: 6, 2
+dealer card: 3
+SURRENDER: -50.0%
+STAND: -25.34072%
+DOUBLE: -13.53118%
+HIT: 1.01552%
+Test result for:
+player cards: 6, 2
+dealer card: 4
+SURRENDER: -50.0%
+STAND: -21.67154%
+DOUBLE: -7.14904%
+HIT: 3.74946%
+Test result for:
+player cards: 6, 2
+dealer card: 5
+SURRENDER: -50.0%
+STAND: -16.90392%
+DOUBLE: 0.2247%
+HIT: 7.08084%
+Test result for:
+player cards: 6, 2
+dealer card: 6
+SURRENDER: -50.0%
+STAND: -15.92468%
+DOUBLE: 7.76556%
+HIT: 11.1245%
+Test result for:
+player cards: 6, 2
+dealer card: 7
+SURRENDER: -50.0%
+STAND: -47.10002%
+DOUBLE: -20.00604%
+HIT: 7.69375%
+Test result for:
+player cards: 6, 2
+dealer card: 8
+SURRENDER: -50.0%
+STAND: -50.82298%
+DOUBLE: -45.67542%
+HIT: -5.95249%
+Test result for:
+player cards: 6, 2
+dealer card: 9
+SURRENDER: -50.0%
+STAND: -53.6612%
+DOUBLE: -70.01624%
+HIT: -20.25021%
+Test result for:
+player cards: 6, 2
+dealer card: 10
+SURRENDER: -50.0%
+STAND: -57.00314%
+DOUBLE: -82.8131%
+HIT: -30.09287%
+Test result for:
+player cards: 6, 2
+dealer card: A
+STAND: -76.35102%
+DOUBLE: -116.17624%
+HIT: -44.1507%
+Test result for:
+player cards: 5, 2
+dealer card: 2
+SURRENDER: -50.0%
+STAND: -29.76418%
+DOUBLE: -44.25166%
+HIT: -11.07127%
+Test result for:
+player cards: 5, 2
+dealer card: 3
+SURRENDER: -50.0%
+STAND: -25.34352%
+DOUBLE: -36.25962%
+HIT: -7.6422%
+Test result for:
+player cards: 5, 2
+dealer card: 4
+SURRENDER: -50.0%
+STAND: -21.68658%
+DOUBLE: -28.86834%
+HIT: -4.65571%
+Test result for:
+player cards: 5, 2
+dealer card: 5
+SURRENDER: -50.0%
+STAND: -16.87648%
+DOUBLE: -20.52718%
+HIT: -0.92592%
+Test result for:
+player cards: 5, 2
+dealer card: 6
+SURRENDER: -50.0%
+STAND: -15.8854%
+DOUBLE: -15.20132%
+HIT: 2.27286%
+Test result for:
+player cards: 5, 2
+dealer card: 7
+SURRENDER: -50.0%
+STAND: -47.07664%
+DOUBLE: -59.17594%
+HIT: -6.87921%
+Test result for:
+player cards: 5, 2
+dealer card: 8
+SURRENDER: -50.0%
+STAND: -50.7827%
+DOUBLE: -84.04622%
+HIT: -20.6302%
+Test result for:
+player cards: 5, 2
+dealer card: 9
+SURRENDER: -50.0%
+STAND: -53.65128%
+DOUBLE: -94.37252%
+HIT: -28.77668%
+Test result for:
+player cards: 5, 2
+dealer card: 10
+SURRENDER: -50.0%
+STAND: -56.97328%
+DOUBLE: -102.01016%
+HIT: -37.13931%
+Test result for:
+player cards: 5, 2
+dealer card: A
+STAND: -76.32526%
+DOUBLE: -138.61514%
+HIT: -52.31824%
+Test result for:
+player cards: 4, 2
+dealer card: 2
+SURRENDER: -50.0%
+STAND: -29.75818%
+DOUBLE: -57.18092%
+HIT: -15.50694%
+Test result for:
+player cards: 4, 2
+dealer card: 3
+SURRENDER: -50.0%
+STAND: -25.37472%
+DOUBLE: -48.65508%
+HIT: -11.95466%
+Test result for:
+player cards: 4, 2
+dealer card: 4
+SURRENDER: -50.0%
+STAND: -21.65606%
+DOUBLE: -41.13386%
+HIT: -8.90014%
+Test result for:
+player cards: 4, 2
+dealer card: 5
+SURRENDER: -50.0%
+STAND: -16.91572%
+DOUBLE: -31.80978%
+HIT: -4.71253%
+Test result for:
+player cards: 4, 2
+dealer card: 6
+SURRENDER: -50.0%
+STAND: -15.88686%
+DOUBLE: -29.38872%
+HIT: -2.78781%
+Test result for:
+player cards: 4, 2
+dealer card: 7
+SURRENDER: -50.0%
+STAND: -47.13422%
+DOUBLE: -88.5499%
+HIT: -15.46466%
+Test result for:
+player cards: 4, 2
+dealer card: 8
+SURRENDER: -50.0%
+STAND: -50.78374%
+DOUBLE: -99.65426%
+HIT: -23.39347%
+Test result for:
+player cards: 4, 2
+dealer card: 9
+SURRENDER: -50.0%
+STAND: -53.68144%
+DOUBLE: -105.48676%
+HIT: -30.74109%
+Test result for:
+player cards: 4, 2
+dealer card: 10
+SURRENDER: -50.0%
+STAND: -56.99842%
+DOUBLE: -112.47576%
+HIT: -39.96241%
+Test result for:
+player cards: 4, 2
+dealer card: A
+DOUBLE: -150.72956%
+STAND: -76.33638%
+HIT: -53.15699%
+Test result for:
+player cards: 3, 2
+dealer card: 2
+SURRENDER: -50.0%
+STAND: -29.70386%
+DOUBLE: -59.26128%
+HIT: -15.281%
+Test result for:
+player cards: 3, 2
+dealer card: 3
+SURRENDER: -50.0%
+STAND: -25.38614%
+DOUBLE: -50.5432%
+HIT: -11.76334%
+Test result for:
+player cards: 3, 2
+dealer card: 4
+SURRENDER: -50.0%
+STAND: -21.61004%
+DOUBLE: -43.02316%
+HIT: -8.72665%
+Test result for:
+player cards: 3, 2
+dealer card: 5
+SURRENDER: -50.0%
+STAND: -16.84086%
+DOUBLE: -33.55376%
+HIT: -4.46716%
+Test result for:
+player cards: 3, 2
+dealer card: 6
+SURRENDER: -50.0%
+STAND: -15.93198%
+DOUBLE: -31.58716%
+HIT: -2.43505%
+Test result for:
+player cards: 3, 2
+dealer card: 7
+SURRENDER: -50.0%
+STAND: -47.08756%
+DOUBLE: -94.21888%
+HIT: -11.36418%
+Test result for:
+player cards: 3, 2
+dealer card: 8
+SURRENDER: -50.0%
+STAND: -50.8153%
+DOUBLE: -101.59864%
+HIT: -18.54738%
+Test result for:
+player cards: 3, 2
+dealer card: 9
+SURRENDER: -50.0%
+STAND: -53.66592%
+DOUBLE: -107.3488%
+HIT: -26.55105%
+Test result for:
+player cards: 3, 2
+dealer card: 10
+SURRENDER: -50.0%
+STAND: -57.02682%
+DOUBLE: -114.22112%
+HIT: -36.51999%
+Test result for:
+player cards: 3, 2
+dealer card: A
+STAND: -76.35628%
+DOUBLE: -152.74272%
+HIT: -50.08761%
+Test result for:
+player cards: 2, 2
+dealer card: 2
+SURRENDER: -50.0%
+STAND: -29.69324%
+DOUBLE: -59.41276%
+HIT: -14.2662%
+SPLIT: -13.39585%
+Test result for:
+player cards: 2, 2
+dealer card: 3
+SURRENDER: -50.0%
+STAND: -25.35418%
+DOUBLE: -50.59724%
+HIT: -10.79623%
+SPLIT: -5.07586%
+Test result for:
+player cards: 2, 2
+dealer card: 4
+SURRENDER: -50.0%
+STAND: -21.65316%
+DOUBLE: -42.9844%
+HIT: -7.58332%
+SPLIT: 1.47505%
+Test result for:
+player cards: 2, 2
+dealer card: 5
+SURRENDER: -50.0%
+STAND: -16.90308%
+DOUBLE: -33.5864%
+HIT: -3.3821%
+SPLIT: 8.81502%
+Test result for:
+player cards: 2, 2
+dealer card: 6
+SURRENDER: -50.0%
+STAND: -15.92482%
+DOUBLE: -31.61164%
+HIT: -1.36489%
+SPLIT: 15.03955%
+Test result for:
+player cards: 2, 2
+dealer card: 7
+SURRENDER: -50.0%
+STAND: -47.09464%
+DOUBLE: -94.12264%
+HIT: -8.23538%
+SPLIT: 0.83793%
+Test result for:
+player cards: 2, 2
+dealer card: 8
+SURRENDER: -50.0%
+STAND: -50.79592%
+DOUBLE: -101.69036%
+HIT: -15.75394%
+SPLIT: -18.46999%
+Test result for:
+player cards: 2, 2
+dealer card: 9
+SURRENDER: -50.0%
+STAND: -53.68346%
+DOUBLE: -107.43892%
+HIT: -24.00739%
+SPLIT: -39.21688%
+Test result for:
+player cards: 2, 2
+dealer card: 10
+SURRENDER: -50.0%
+STAND: -57.00562%
+DOUBLE: -114.18284%
+HIT: -34.32336%
+SPLIT: -65.03049%
+Test result for:
+player cards: 2, 2
+dealer card: A
+STAND: -76.3436%
+DOUBLE: -152.76924%
+HIT: -48.36741%
+SPLIT: -97.66525%
+Test result for:
+player cards: 3, 3
+dealer card: 2
+SURRENDER: -50.0%
+STAND: -29.77922%
+DOUBLE: -57.24984%
+HIT: -15.47539%
+SPLIT: -20.52801%
+Test result for:
+player cards: 3, 3
+dealer card: 3
+SURRENDER: -50.0%
+STAND: -25.3883%
+DOUBLE: -48.56442%
+HIT: -11.93951%
+SPLIT: -11.03344%
+Test result for:
+player cards: 3, 3
+dealer card: 4
+SURRENDER: -50.0%
+STAND: -21.65506%
+DOUBLE: -41.13808%
+HIT: -8.85982%
+SPLIT: -2.81782%
+Test result for:
+player cards: 3, 3
+dealer card: 5
+SURRENDER: -50.0%
+STAND: -16.87438%
+DOUBLE: -31.79444%
+HIT: -4.7815%
+SPLIT: 7.36696%
+Test result for:
+player cards: 3, 3
+dealer card: 6
+SURRENDER: -50.0%
+STAND: -15.86258%
+DOUBLE: -29.3905%
+HIT: -2.80615%
+SPLIT: 13.01896%
+Test result for:
+player cards: 3, 3
+dealer card: 7
+SURRENDER: -50.0%
+STAND: -47.1205%
+DOUBLE: -88.53868%
+HIT: -15.45534%
+SPLIT: -4.47869%
+Test result for:
+player cards: 3, 3
+dealer card: 8
+SURRENDER: -50.0%
+STAND: -50.80374%
+DOUBLE: -99.66738%
+HIT: -23.42553%
+SPLIT: -23.31515%
+Test result for:
+player cards: 3, 3
+dealer card: 9
+SURRENDER: -50.0%
+STAND: -53.6624%
+DOUBLE: -105.51094%
+HIT: -30.68005%
+SPLIT: -43.74979%
+Test result for:
+player cards: 3, 3
+dealer card: 10
+SURRENDER: -50.0%
+STAND: -56.9961%
+DOUBLE: -112.5%
+HIT: -40.0513%
+SPLIT: -74.20834%
+Test result for:
+player cards: 3, 3
+dealer card: A
+STAND: -76.34932%
+DOUBLE: -150.8416%
+HIT: -53.14852%
+SPLIT: -100.73246%
+Test result for:
+player cards: 4, 4
+dealer card: 2
+SURRENDER: -50.0%
+STAND: -29.76904%
+DOUBLE: -20.92606%
+HIT: -2.06035%
+SPLIT: -25.48035%
+Test result for:
+player cards: 4, 4
+dealer card: 3
+SURRENDER: -50.0%
+STAND: -25.38054%
+DOUBLE: -13.53972%
+HIT: 1.01344%
+SPLIT: -15.66185%
+Test result for:
+player cards: 4, 4
+dealer card: 4
+SURRENDER: -50.0%
+STAND: -21.65364%
+DOUBLE: -7.13532%
+HIT: 3.7339%
+SPLIT: -7.2828%
+Test result for:
+player cards: 4, 4
+dealer card: 5
+SURRENDER: -50.0%
+STAND: -16.89458%
+DOUBLE: 0.23712%
+HIT: 7.05379%
+SPLIT: 3.47898%
+Test result for:
+player cards: 4, 4
+dealer card: 6
+SURRENDER: -50.0%
+STAND: -15.84596%
+DOUBLE: 7.832%
+HIT: 11.08414%
+SPLIT: 8.68694%
+Test result for:
+player cards: 4, 4
+dealer card: 7
+SURRENDER: -50.0%
+STAND: -47.11416%
+DOUBLE: -19.94282%
+HIT: 7.70105%
+SPLIT: -15.60061%
+Test result for:
+player cards: 4, 4
+dealer card: 8
+SURRENDER: -50.0%
+STAND: -50.77854%
+DOUBLE: -45.67334%
+HIT: -6.01101%
+SPLIT: -32.54033%
+Test result for:
+player cards: 4, 4
+dealer card: 9
+SURRENDER: -50.0%
+STAND: -53.6695%
+DOUBLE: -70.09474%
+HIT: -20.1942%
+SPLIT: -51.18043%
+Test result for:
+player cards: 4, 4
+dealer card: 10
+SURRENDER: -50.0%
+STAND: -56.96194%
+DOUBLE: -82.7403%
+HIT: -30.15476%
+SPLIT: -80.434015%
+Test result for:
+player cards: 4, 4
+dealer card: A
+STAND: -76.35796%
+DOUBLE: -116.08258%
+HIT: -44.11993%
+SPLIT: -106.19699%
+Test result for:
+player cards: 5, 5
+dealer card: 2
+SURRENDER: -50.0%
+STAND: -29.7193%
+DOUBLE: 36.06964%
+HIT: 18.39107%
+SPLIT: -34.70716%
+Test result for:
+player cards: 5, 5
+dealer card: 3
+SURRENDER: -50.0%
+STAND: -25.38328%
+DOUBLE: 41.37084%
+HIT: 20.92126%
+SPLIT: -25.77815%
+Test result for:
+player cards: 5, 5
+dealer card: 4
+SURRENDER: -50.0%
+STAND: -21.60294%
+DOUBLE: 46.18612%
+HIT: 23.1462%
+SPLIT: -18.00406%
+Test result for:
+player cards: 5, 5
+dealer card: 5
+SURRENDER: -50.0%
+STAND: -16.90926%
+DOUBLE: 51.75132%
+HIT: 25.88871%
+SPLIT: -7.35773%
+Test result for:
+player cards: 5, 5
+dealer card: 6
+SURRENDER: -50.0%
+STAND: -15.89152%
+DOUBLE: 57.23782%
+HIT: 28.69022%
+SPLIT: -2.2648%
+Test result for:
+player cards: 5, 5
+dealer card: 7
+SURRENDER: -50.0%
+STAND: -47.0917%
+DOUBLE: 38.8484%
+HIT: 25.20715%
+SPLIT: -28.53434%
+Test result for:
+player cards: 5, 5
+dealer card: 8
+SURRENDER: -50.0%
+STAND: -50.7973%
+DOUBLE: 27.44756%
+HIT: 19.02525%
+SPLIT: -45.32843%
+Test result for:
+player cards: 5, 5
+dealer card: 9
+SURRENDER: -50.0%
+STAND: -53.68012%
+DOUBLE: 13.24184%
+HIT: 10.83829%
+SPLIT: -69.62383%
+Test result for:
+player cards: 5, 5
+dealer card: 10
+SURRENDER: -50.0%
+STAND: -56.9752%
+DOUBLE: -15.62384%
+HIT: -5.31864%
+SPLIT: -87.25599%
+Test result for:
+player cards: 5, 5
+dealer card: A
+STAND: -76.35302%
+DOUBLE: -60.03296%
+HIT: -24.46439%
+SPLIT: -113.93723%
+Test result for:
+player cards: 6, 6
+dealer card: 2
+SURRENDER: -50.0%
+STAND: -29.79516%
+DOUBLE: -50.26626%
+HIT: -25.1084%
+SPLIT: -23.59637%
+Test result for:
+player cards: 6, 6
+dealer card: 3
+SURRENDER: -50.0%
+STAND: -25.34946%
+DOUBLE: -45.19618%
+HIT: -22.64723%
+SPLIT: -14.10127%
+Test result for:
+player cards: 6, 6
+dealer card: 4
+SURRENDER: -50.0%
+STAND: -21.65116%
+DOUBLE: -41.50506%
+HIT: -20.78516%
+SPLIT: -5.80692%
+Test result for:
+player cards: 6, 6
+dealer card: 5
+SURRENDER: -50.0%
+STAND: -16.89098%
+DOUBLE: -37.19398%
+HIT: -18.65638%
+SPLIT: 4.8706%
+Test result for:
+player cards: 6, 6
+dealer card: 6
+SURRENDER: -50.0%
+STAND: -15.87076%
+DOUBLE: -33.06946%
+HIT: -16.50239%
+SPLIT: 10.96538%
+Test result for:
+player cards: 6, 6
+dealer card: 7
+SURRENDER: -50.0%
+STAND: -47.129%
+DOUBLE: -49.38532%
+HIT: -21.11653%
+SPLIT: -25.9333%
+Test result for:
+player cards: 6, 6
+dealer card: 8
+SURRENDER: -50.0%
+STAND: -50.80018%
+DOUBLE: -61.05052%
+HIT: -27.24918%
+SPLIT: -45.86965%
+Test result for:
+player cards: 6, 6
+dealer card: 9
+SURRENDER: -50.0%
+STAND: -53.6538%
+DOUBLE: -73.40582%
+HIT: -34.19947%
+SPLIT: -64.348325%
+Test result for:
+player cards: 6, 6
+dealer card: 10
+SURRENDER: -50.0%
+STAND: -56.94974%
+DOUBLE: -89.23168%
+HIT: -43.30429%
+SPLIT: -81.2027%
+Test result for:
+player cards: 6, 6
+dealer card: A
+STAND: -76.32526%
+DOUBLE: -119.48402%
+HIT: -55.63275%
+SPLIT: -115.31891%
+Test result for:
+player cards: 7, 7
+dealer card: 2
+SURRENDER: -50.0%
+STAND: -29.66676%
+DOUBLE: -72.4824%
+HIT: -36.22222%
+SPLIT: -12.79526%
+Test result for:
+player cards: 7, 7
+dealer card: 3
+SURRENDER: -50.0%
+STAND: -25.34132%
+DOUBLE: -69.68358%
+HIT: -34.79181%
+SPLIT: -3.86546%
+Test result for:
+player cards: 7, 7
+dealer card: 4
+SURRENDER: -50.0%
+STAND: -21.61658%
+DOUBLE: -66.24364%
+HIT: -33.15693%
+SPLIT: 4.04023%
+Test result for:
+player cards: 7, 7
+dealer card: 5
+SURRENDER: -50.0%
+STAND: -16.90728%
+DOUBLE: -62.69806%
+HIT: -31.34423%
+SPLIT: 13.86988%
+Test result for:
+player cards: 7, 7
+dealer card: 6
+SURRENDER: -50.0%
+STAND: -15.87114%
+DOUBLE: -58.75756%
+HIT: -29.33907%
+SPLIT: 22.93717%
+Test result for:
+player cards: 7, 7
+dealer card: 7
+SURRENDER: -50.0%
+STAND: -47.13346%
+DOUBLE: -65.38126%
+HIT: -31.60142%
+SPLIT: -3.46977%
+Test result for:
+player cards: 7, 7
+dealer card: 8
+SURRENDER: -50.0%
+STAND: -50.78196%
+DOUBLE: -75.7895%
+HIT: -36.84299%
+SPLIT: -37.28583%
+Test result for:
+player cards: 7, 7
+dealer card: 9
+SURRENDER: -50.0%
+STAND: -53.64874%
+DOUBLE: -86.88338%
+HIT: -42.84321%
+SPLIT: -57.798445%
+Test result for:
+player cards: 7, 7
+dealer card: 10
+SURRENDER: -50.0%
+STAND: -57.01638%
+DOUBLE: -101.78836%
+HIT: -50.74618%
+SPLIT: -76.28181%
+Test result for:
+player cards: 7, 7
+dealer card: A
+DOUBLE: -126.24296%
+STAND: -76.34148%
+HIT: -61.44948%
+SPLIT: -111.89976%
+Test result for:
+player cards: 8, 8
+dealer card: 2
+SURRENDER: -50.0%
+STAND: -29.74116%
+DOUBLE: -93.88406%
+HIT: -46.95898%
+SPLIT: 8.45218%
+Test result for:
+player cards: 8, 8
+dealer card: 3
+SURRENDER: -50.0%
+STAND: -25.37864%
+DOUBLE: -92.54272%
+HIT: -46.21269%
+SPLIT: 15.80903%
+Test result for:
+player cards: 8, 8
+dealer card: 4
+SURRENDER: -50.0%
+STAND: -21.67354%
+DOUBLE: -91.26638%
+HIT: -45.6337%
+SPLIT: 22.63668%
+Test result for:
+player cards: 8, 8
+dealer card: 5
+SURRENDER: -50.0%
+DOUBLE: -89.84886%
+STAND: -16.92482%
+HIT: -44.92578%
+SPLIT: 30.88117%
+Test result for:
+player cards: 8, 8
+dealer card: 6
+SURRENDER: -50.0%
+STAND: -15.86668%
+DOUBLE: -85.59782%
+HIT: -42.83932%
+SPLIT: 41.26588%
+Test result for:
+player cards: 8, 8
+dealer card: 7
+SURRENDER: -50.0%
+DOUBLE: -81.58488%
+STAND: -47.1056%
+HIT: -40.83729%
+SPLIT: 31.84196%
+Test result for:
+player cards: 8, 8
+dealer card: 8
+SURRENDER: -50.0%
+STAND: -50.77426%
+DOUBLE: -90.73936%
+HIT: -45.38708%
+SPLIT: -1.70646%
+Test result for:
+player cards: 8, 8
+dealer card: 9
+SURRENDER: -50.0%
+STAND: -53.69546%
+DOUBLE: -101.10448%
+HIT: -50.54354%
+SPLIT: -36.61316%
+Test result for:
+player cards: 8, 8
+dealer card: 10
+SURRENDER: -50.0%
+DOUBLE: -114.62874%
+STAND: -56.98168%
+HIT: -57.35867%
+SPLIT: -59.94216%
+Test result for:
+player cards: 8, 8
+dealer card: A
+STAND: -76.34154%
+DOUBLE: -133.10382%
+HIT: -66.5624%
+SPLIT: -92.12473%
+Test result for:
+player cards: 9, 9
+dealer card: 2
+SURRENDER: -50.0%
+STAND: 11.84028%
+DOUBLE: -124.01962%
+HIT: -62.0143%
+SPLIT: 20.23062%
+Test result for:
+player cards: 9, 9
+dealer card: 3
+SURRENDER: -50.0%
+STAND: 14.62589%
+DOUBLE: -123.47118%
+HIT: -61.73732%
+SPLIT: 27.00292%
+Test result for:
+player cards: 9, 9
+dealer card: 4
+SURRENDER: -50.0%
+STAND: 17.27137%
+DOUBLE: -123.14286%
+HIT: -61.59379%
+SPLIT: 32.73028%
+Test result for:
+player cards: 9, 9
+dealer card: 5
+SURRENDER: -50.0%
+DOUBLE: -122.80718%
+STAND: 19.53962%
+HIT: -61.3996%
+SPLIT: 40.07476%
+Test result for:
+player cards: 9, 9
+dealer card: 6
+SURRENDER: -50.0%
+STAND: 27.86168%
+DOUBLE: -121.62998%
+HIT: -60.78444%
+SPLIT: 47.23461%
+Test result for:
+player cards: 9, 9
+dealer card: 7
+SURRENDER: -50.0%
+STAND: 39.69408%
+DOUBLE: -118.0193%
+HIT: -58.99411%
+SPLIT: 35.53403%
+Test result for:
+player cards: 9, 9
+dealer card: 8
+SURRENDER: -50.0%
+STAND: 10.54462%
+DOUBLE: -117.5906%
+HIT: -58.82359%
+SPLIT: 21.8859%
+Test result for:
+player cards: 9, 9
+dealer card: 9
+SURRENDER: -50.0%
+DOUBLE: -122.3758%
+STAND: -17.89867%
+HIT: -61.16928%
+SPLIT: -7.70243%
+Test result for:
+player cards: 9, 9
+dealer card: 10
+SURRENDER: -50.0%
+STAND: -23.66433%
+DOUBLE: -134.40694%
+HIT: -67.18886%
+SPLIT: -43.134985%
+Test result for:
+player cards: 9, 9
+dealer card: A
+STAND: -37.2438%
+HIT: -74.05587%
+DOUBLE: -148.13174%
+SPLIT: -75.81014%
+Test result for:
+player cards: 10, 10
+dealer card: 2
+SURRENDER: -50.0%
+STAND: 63.80343%
+DOUBLE: -170.93512%
+HIT: -85.45956%
+SPLIT: 31.64314%
+Test result for:
+player cards: 10, 10
+dealer card: 3
+SURRENDER: -50.0%
+STAND: 64.88791%
+DOUBLE: -170.87632%
+HIT: -85.42939%
+SPLIT: 37.60242%
+Test result for:
+player cards: 10, 10
+dealer card: 4
+SURRENDER: -50.0%
+DOUBLE: -170.81682%
+STAND: 65.84601%
+HIT: -85.39522%
+SPLIT: 42.71082%
+Test result for:
+player cards: 10, 10
+dealer card: 5
+SURRENDER: -50.0%
+STAND: 66.879%
+DOUBLE: -170.74764%
+HIT: -85.3709%
+SPLIT: 48.95061%
+Test result for:
+player cards: 10, 10
+dealer card: 6
+SURRENDER: -50.0%
+STAND: 70.14306%
+DOUBLE: -170.91414%
+HIT: -85.46567%
+SPLIT: 54.95683%
+Test result for:
+player cards: 10, 10
+dealer card: 7
+SURRENDER: -50.0%
+STAND: 77.28194%
+DOUBLE: -170.41666%
+HIT: -85.24758%
+SPLIT: 45.62407%
+Test result for:
+player cards: 10, 10
+dealer card: 8
+SURRENDER: -50.0%
+STAND: 78.91169%
+DOUBLE: -170.37402%
+HIT: -85.19314%
+SPLIT: 30.84978%
+Test result for:
+player cards: 10, 10
+dealer card: 9
+SURRENDER: -50.0%
+DOUBLE: -170.21586%
+STAND: 75.77119%
+HIT: -85.12168%
+SPLIT: 11.964575%
+Test result for:
+player cards: 10, 10
+dealer card: 10
+SURRENDER: -50.0%
+DOUBLE: -171.65208%
+STAND: 43.63014%
+HIT: -85.82893%
+SPLIT: -17.697955%
+Test result for:
+player cards: 10, 10
+dealer card: A
+STAND: 14.98947%
+DOUBLE: -179.3731%
+HIT: -89.69385%
+SPLIT: -60.68881%
+Test result for:
+player cards: A, A
+dealer card: 2
+SURRENDER: -50.0%
+STAND: -100.0%
+DOUBLE: -200.0%
+HIT: -100.0%
+SPLIT: 36.59968%
+Test result for:
+player cards: A, A
+dealer card: 3
+SURRENDER: -50.0%
+STAND: -100.0%
+DOUBLE: -200.0%
+HIT: -100.0%
+SPLIT: 41.11937%
+Test result for:
+player cards: A, A
+dealer card: 4
+SURRENDER: -50.0%
+STAND: -100.0%
+DOUBLE: -200.0%
+HIT: -100.0%
+SPLIT: 44.80548%
+Test result for:
+player cards: A, A
+dealer card: 5
+SURRENDER: -50.0%
+STAND: -100.0%
+HIT: -100.0%
+DOUBLE: -200.0%
+SPLIT: 49.46009%
+Test result for:
+player cards: A, A
+dealer card: 6
+SURRENDER: -50.0%
+DOUBLE: -200.0%
+HIT: -100.0%
+STAND: -100.0%
+SPLIT: 54.01327%
+Test result for:
+player cards: A, A
+dealer card: 7
+SURRENDER: -50.0%
+STAND: -100.0%
+DOUBLE: -200.0%
+HIT: -100.0%
+SPLIT: 38.34177%
+Test result for:
+player cards: A, A
+dealer card: 8
+SURRENDER: -50.0%
+STAND: -100.0%
+DOUBLE: -200.0%
+HIT: -100.0%
+SPLIT: 26.9291%
+Test result for:
+player cards: A, A
+dealer card: 9
+SURRENDER: -50.0%
+STAND: -100.0%
+DOUBLE: -200.0%
+HIT: -100.0%
+SPLIT: 15.17557%
+Test result for:
+player cards: A, A
+dealer card: 10
+SURRENDER: -50.0%
+STAND: -100.0%
+DOUBLE: -200.0%
+HIT: -100.0%
+SPLIT: -6.64987%
+Test result for:
+player cards: A, A
+dealer card: A
+HIT: -100.0%
+STAND: -100.0%
+DOUBLE: -200.0%
+SPLIT: -55.68959%

@@ -9,6 +9,7 @@ import java.util.*;
 public class PatternReader {
     private final Map<String, Decision> inputTranslator = new HashMap<>();
     private final Map<Integer, Set<Value>> columnTranslator = new HashMap<>();
+
     public Pattern readPattern(String[][] patternArray, double[] insuranceArray) {
         initialize();
 
@@ -17,9 +18,9 @@ public class PatternReader {
             for(int j=0;j<10;j++) {
                 for(Value value : columnTranslator.get(j)) {
                     normal.put(new Pair<>(i+5, value),
-                            new Instruction(inputTranslator.get(patternArray[i][j].substring(0,1)),
+                            new Instruction(inputTranslator.getOrDefault(patternArray[i][j].substring(0,1), Decision.NONE),
                                     Integer.parseInt(patternArray[i][j].substring(2)),
-                                    inputTranslator.get(patternArray[i][j].substring(1,2)),
+                                    inputTranslator.getOrDefault(patternArray[i][j].substring(1,2), Decision.NONE),
                                     true));
                 }
             }
